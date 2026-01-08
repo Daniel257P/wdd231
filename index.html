@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231</title>
+
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/dates.js" defer></script>
+<script src="scripts/course.js" defer></script>
+
 </head>
 <body>
-    <h1> WDD 231 - Daniel Paulino</h1>
+    <header>
+        <img src="images/camping-svgrepo-com.svg" alt="Camping Icon" width="150" height="150">
+        <span>Daniel Paulino</span>
+        <button id="ham-btn" class="humburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>About Me</h2>
+
+        </section>
+        <section>
+            <h2>Student Photo</h2>
+
+        </section>
+        <section>
+            <h2>Web Certificate Courses</h2>
+        </section>
+
+    </main>
+    <footer>
+        <div class="social">
+            <a href="#" target="_blank"><img src="images/github.svg" alt="Github Icon" width="16" height="16"></a>
+            <a href="#" target="_blank"><img src="images/instagram.svg" alt="Instagram Icon" width="16" height="16"></a>
+            <a href="#" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Icon" width="16" height="16"></a>
+            <a href="#" target="_blank"><img src="images/twitter-x.svg" alt="twitter-x Icon" width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Daniel Paulino</p>
+        <p>Last Modification:<span id="lastmodified"></span></p>
+
+    </footer>
 </body>
 </html>

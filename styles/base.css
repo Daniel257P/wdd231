@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+/***************** Header Styles *********************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #005461;
+}
+
+/***************** Hamburger Navigation *********************/
+.humburger {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #005461;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.humburger::before {
+    content: "\2630";
+}
+
+.humburger.show::before {
+    content: "\2715";
+}
+
+/***************** Navigation  *********************/
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #005461;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: #ddd;
+
+}
+
+.navigation a:hover {
+    background-color: #249E94;
+    color: white;
+}
+
+h1 {
+    margin-left: 10px;
+    color: #005461;
+}
+
+/***************** Footer  *********************/
+footer {
+    background-color: #ddd;
+    padding: 1rem 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #005461;
+    border-top: solid 1px #ddd;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+}
+
+.social a:hover {
+    background-color: #005461;
+}
