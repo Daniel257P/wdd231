@@ -21,8 +21,26 @@
     border: none;
 }
 
+main { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+} 
+section { 
+    margin: 0; 
 
-
+} 
+section h2 { 
+    font-size: 1.6rem; 
+    text-align: center;
+    background-color: #ddd;
+    grid-column: 1/2;   
+}
+.full-width { 
+    grid-column: 1 / -1; 
+}
 
 
 

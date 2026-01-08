@@ -79,6 +79,26 @@ h1 {
     margin-left: 10px;
     color: #005461;
 }
+main { 
+    padding: 1rem; 
+}
+/***************** Sections  *********************/
+section { 
+    background-color: #f7f7f7; 
+    margin-bottom: 1.5rem; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+section h2 { 
+    margin: 0; 
+    padding: 0.75rem 1rem;
+    font-size: 1.4rem; 
+    color: #333; 
+    text-align: center;
+    background-color: #ddd;
+    display: block;
+}
+
 
 /***************** Footer  *********************/
 footer {
