@@ -89,6 +89,12 @@ section {
     border-radius: 8px; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
+section p {
+    padding: 0 1rem 1rem 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
 section h2 { 
     margin: 0; 
     padding: 0.75rem 1rem;
@@ -99,6 +105,81 @@ section h2 {
     display: block;
 }
 
+section img {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+}
+
+.filters {
+    text-align: center;
+    margin: .5rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.filters button {
+    background-color: #005461;
+    color: white;
+    border: none;
+    padding: 10px 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #003f4a;
+}
+
+.course-card {
+    border: solid 1px #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.filters button.active {
+    background-color: #249E94; 
+    color: white;
+}
+#courseContainer {
+    justify-items: center;
+}
+.course-card {
+    border: solid 1px #ddd;
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+#totalCredits {
+    font-weight: bold;
+}
+#completedCourses {
+    font-weight: bold;
+}
+
+#completedCourses {
+    border-bottom: #2e8b56 solid 2px;
+}
+#incompleteCourses {
+    border-bottom: #81818177 solid 2px;
+}
+.course-card:hover {
+    background-color: rgba(00, 54, 61, 0.2);
+    color: #003f4a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.course-card.course-card.completed{
+        border-left: 6px solid #2e8b56; 
+}
+.course-card.course-card.incomplete{
+        border-left: 6px solid #81818177; 
+}
 
 /***************** Footer  *********************/
 footer {

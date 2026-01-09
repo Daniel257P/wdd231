@@ -12,6 +12,9 @@
 <script src="scripts/navigation.js" defer></script>
 <script src="scripts/dates.js" defer></script>
 <script src="scripts/course.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -41,6 +44,15 @@
         </section>
         <section class="full-width">
             <h2>Web Certificate Courses</h2>
+            <div class="filters">
+                <button id="all">All Courses</button>
+                <button id="wdd">WDD Courses</button>
+                <button id="cse">CSE Courses</button>
+            </div>
+            <div id="courseContainer"></div>
+            <p>Total Credits: <span id="totalCredits">0</span></p>
+            <p>Completed courses: <span id="completedCourses">0</span></p>
+
         </section>
 
     </main>

@@ -42,34 +42,43 @@ section h2 {
     grid-column: 1 / -1; 
 }
 
+.filters {
+    text-align: center;
+    margin: 1rem;
+}
 
+.filters button {
+    background-color: #005461;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+.filters button:hover {
+    background-color: #003f4a;
+}
 
+.filters button.active {
+    background-color: #249E94; 
+    color: white;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#courseContainer {
+    justify-items: center;
+}
+.course-card {
+    border: solid 1px #ddd;
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+#totalCredits {
+    font-weight: bold;
+}
 
 }
