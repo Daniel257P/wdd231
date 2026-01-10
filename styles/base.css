@@ -113,7 +113,6 @@ section img {
 
 .filters {
     text-align: center;
-    margin: .5rem;
     margin: 2rem 0 2rem 0;
 }
 
@@ -180,6 +179,14 @@ section img {
 .course-card.course-card.incomplete{
         border-left: 6px solid #81818177; 
 }
+
+#courseContainer {
+    justify-items: center;
+}
+#totalCredits {
+    font-weight: bold;
+}
+
 
 /***************** Footer  *********************/
 footer {

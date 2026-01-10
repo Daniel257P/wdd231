@@ -5,7 +5,7 @@
     }
 
     header {
-        grid-template-columns: 24x auto;
+        grid-template-columns: 24px auto;
     }
 .humburger {
     display: none;
@@ -65,20 +65,4 @@ section h2 {
     background-color: #249E94; 
     color: white;
 }
-
-#courseContainer {
-    justify-items: center;
-}
-.course-card {
-    border: solid 1px #ddd;
-    width: 100%;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-}
-#totalCredits {
-    font-weight: bold;
-}
-
 }
