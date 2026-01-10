@@ -149,12 +149,10 @@ section img {
 #totalCredits {
     font-weight: bold;
 }
-#completedCourses {
-    font-weight: bold;
-}
 
 #completedCourses {
     border-bottom: #2e8b56 solid 2px;
+    font-weight: bold;
 }
 #incompleteCourses {
     border-bottom: #81818177 solid 2px;
