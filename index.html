@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+    <meta name="description" content="A responsive home page for WDD 231 featuring navigation, course sections, optimized images, a personalstudent photo and about section.">
+    <meta name="author" content="Daniel Paulino">
+    <title>WDD 231 - Web Front-End Development</title>
 
 
 <link rel="stylesheet" href="styles/normalize.css">
@@ -21,7 +23,7 @@
     <header>
         <img src="images/camping-svgrepo-com.svg" alt="Camping Icon" width="150" height="150">
         <span>Daniel Paulino</span>
-        <button id="ham-btn" class="humburger"></button>
+        <button id="ham-btn" class="humburger" title="ham-btn" aria-label="toggle navigation"></button>
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
@@ -39,7 +41,7 @@
         </section>
         <section>
             <h2>Student Photo</h2>
-            <img src="images/profile.jpg" alt="Daniel Profile Photo" width="200" height="250">
+            <img src="images/profile.webp" alt="Daniel Profile Photo" loading="lazy" width="300" height="360">
 
         </section>
         <section class="full-width">

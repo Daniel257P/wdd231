@@ -2,10 +2,9 @@ const buttons = document.querySelectorAll(".filters button");
 
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
-    // Quita la clase active de todos
+
     buttons.forEach(b => b.classList.remove("active"));
 
-    // Agrega active al botón clickeado
     btn.classList.add("active");
   });
 });
@@ -133,24 +132,3 @@ function createcourseCards(courseArray) {
 }
 
 
-
-// function createcourseCards(courseArray) {
-
-//     const container = document.getElementById('courseContainer');
-//     container.innerHTML = '';
-//     let totalCredits = 0;
-//     courseArray.forEach(course => {
-//         totalCredits += course.credits;
-//         const card = document.createElement('div');
-//         card.className = 'course-card';
-//         card.innerHTML = `
-//             <h3>${course.subject} ${course.number}: ${course.title}</h3>
-//             <p>${course.description}</p>
-//             <p>Credits: ${course.credits}</p>
-//             <p>Technology: ${course.technology.join(', ')}</p>
-//             <p>Completed: ${course.completed ? 'Yes' : 'No'}</p>
-//         `;
-//         container.appendChild(card);
-//     });
-//     document.getElementById('totalCredits').textContent = totalCredits;
-// }
