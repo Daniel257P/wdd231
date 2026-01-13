@@ -1,0 +1,28 @@
+{
+    "family_name": "Rodriguez",
+    "move_in_date": "2021-09-15",
+    "number_of_members": 4,
+    "visited_by_bishopric": true,
+    "family_members": 
+    [
+    {
+        "name": "Carlos Rodriguez",
+        "gender": "Male",
+        "birth_date": "1980-05-20"
+    },
+    {
+        "name": "Maria Rodriguez",     
+        "gender": "Female",
+        "birth_date": "1982-08-15" 
+    },
+    {
+        "name": "Luis Rodriguez",
+        "gender": "Male",
+        "birth_date": "2010-03-10"
+    },
+    {
+        "name": "Sofia Rodriguez",
+        "gender": "Female",
+        "birth_date": "2013-07-22" }
+    ]   
+}
