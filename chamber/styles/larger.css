@@ -1,0 +1,63 @@
+@media only screen and (min-width: 38rem) {
+header,main,nav,footer {
+    max-width: 1400px;
+    margin: 0 auto;
+    }
+
+header {
+    grid-template-columns: 48px auto;
+    }
+.humburger {
+    display: none;
+}
+.navigation {
+    display: block;
+    border-bottom: solid 1px #ddd;
+}
+.navigation ul {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.navigation a {
+    border: none;
+}
+
+main { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+} 
+.directory-control {
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: center;
+}
+ footer {
+    grid-template-columns: 1fr auto 1fr;
+    }
+.directory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+.directory-list .card > div {
+    grid-template-columns: repeat(4, 20vw);
+    }
+}
+
+@media only screen and (min-width: 55rem) {
+    .directory-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 75rem) {
+    .directory-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+
+    

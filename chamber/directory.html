@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">  
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <!-- Favicon link here -->
+
+    <meta property="og:title" content="Directory">
+    <meta property="og:description" content="This is the directory page for Jarrell Chamber of Commerce.">
+    <meta property="og:url" content="https://daniel257p.github.io/wdd231/directory.html">
+    <meta property="og:image:width" content="600"> 
+    <meta property="og:image:height" content="315">
+    <meta property="og:image" content="https://daniel257p.github.io/wdd231/images/">
+
+
+</head>
+<body>
+    <header>
+        <img src="images/chamber-logo.svg" alt="Jarrell Chamber of Commerce Logo" width="600" height="600">
+        <span>Jarrell Chamber of Commerce</span>
+        <button id="ham-btn" class="humburger" title="ham-btn" aria-label="toggle navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Directory</a></li>
+            <li class="current"><a href="#">Home</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Business Directory</h1>
+        <div class="directory-control">
+            <div class="display-method">
+                <button id="grid-button"  aria-label="Grid View" title="grid-btn">Grid</button>
+                <button id="list-button" aria-label="List View" title="list-btn">List</button>
+            </div>
+        </div>
+        <div id="directory" class="directory-grid"></div>
+        
+    </main>
+    <footer>
+        <div class="textcontent">
+            <span>253 Address Rd</span>
+            <span>Jarrell, TX 76537</span>
+            <span>info@Jarrellchamber.com</span>
+            <span>(512) 123-4567</span>
+        </div>
+
+        <div class="social">
+            <a href="#" target="_blank"><img src="images/youtube.svg" alt="YouTube" width="16" height="16"></a>
+            <a href="#" target="_blank"><img src="images/twitter-x.svg" alt="twitter-x Icon" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/daniel-paulinop" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Icon" width="16" height="16"></a>
+        </div>
+        <div class="textcontent">
+            <span>WDD231 Class Project</span>
+            <span>Daniel Paulino</span>
+            <p>&copy; <span id="currentyear"></span> Jarrell Chamber of Commerce</p>
+            <p>Last Modification:<span id="lastmodified"></span></p>
+        </div>
+
+    </footer>
+    
+</body>
+</html>

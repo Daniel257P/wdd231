@@ -1,0 +1,60 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jarrell Chamber of Commerce Logo">
+
+  <!-- ===================== -->
+  <!-- Definitions (Invisible Paths) -->
+  <!-- ===================== -->
+  <defs>
+    <!-- Top Curved Text Path -->
+    <path id="topCircleText" d="M 300,320
+             m -210,0
+             a 210,210 0 1,1 420,0
+             a 210,210 0 1,1 -420,0"></path>
+
+    <!-- Bottom Curved Text Path -->
+    <path id="bottomCircleText" d="M 300,300
+             m -210,0
+             a 210,210 0 1,0 420,0
+             a 210,210 0 1,0 -420,0"></path>
+  </defs>
+
+  <!-- ===================== -->
+  <!-- Background -->
+  <!-- ===================== -->
+  <circle cx="300" cy="300" r="260" fill="#0B2C4A"></circle>
+
+  <!-- Gold Border -->
+  <circle cx="300" cy="300" r="230" fill="none" stroke="#C9A44C" stroke-width="8"></circle>
+
+  <!-- ===================== -->
+  <!-- Texas Star Icon -->
+  <!-- ===================== -->
+  <polygon points="300,165 325,245 410,245 340,295
+            365,375 300,330 235,375 260,295
+            190,245 275,245" fill="#B22234"></polygon>
+
+  <!-- ===================== -->
+  <!-- Curved Top Text -->
+  <!-- ===================== -->
+  <text font-family="Georgia, serif" font-size="30" fill="#FFFFFF" letter-spacing="5">
+    <textPath href="#topCircleText" startOffset="25%" text-anchor="middle">
+      JARRELL
+    </textPath>
+  </text>
+
+  <!-- ===================== -->
+  <!-- Curved Bottom Text -->
+  <!-- ===================== -->
+  <text font-family="Georgia, serif" font-size="26" fill="#FFFFFF" letter-spacing="5">
+    <textPath href="#bottomCircleText" startOffset="25%" text-anchor="middle">
+      .CHAMBER OF COMMERCE.
+    </textPath>
+  </text>
+
+  <!-- ===================== -->
+  <!-- Footer Text -->
+  <!-- ===================== -->
+  <text x="300" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#C9A44C">
+    Jarrell, Texas USA
+  </text>
+
+</svg>
