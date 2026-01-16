@@ -4,17 +4,17 @@
     margin: 0;
 }
 :root  {
-    --primary-color: #0B2C4A;
+    --primary-color: #0b2c4a;
     --secondary-color: #C9A44C;
     --font-color: #333;
     --background-color: #f5f5f5;
     --header-font: rgb(0, 0, 0);
-    --header-background: rgba(211, 211, 211, 0.107);
+    --header-background: rgb(11, 44, 74, 0.068);
     --header-hover: rgb(165, 163, 146);
-    --body-background: rgb(242, 235, 232);
+    --body-background: rgb(11, 44, 74, 0.068);
     --body-font: rgb(0, 0, 0);
     --body-hover: rgb(232, 220, 215);
-    --body-card: rgb(250, 248, 245);
+    --body-card: rgb(11, 44, 74, 0.268);
 }
 
 /* Header  */
@@ -49,6 +49,7 @@ header span {
     color: var(--primary-color);
     cursor: pointer;
     font-family: "open sans", sans-serif;
+    margin-bottom: .8rem;
 }
 
 .humburger::before {
@@ -96,13 +97,12 @@ header span {
 }
 
 main {
-    background-color: var(--header-background);
+    background-color: var(--body-background);
     color: var(--body-font);
     padding: 2rem 1rem;
 }
 
 .card {
-    background-color: var(--body-card);
     border-radius: 12px;
     padding: 16px;
     width: 100%;
@@ -113,19 +113,25 @@ main {
     overflow-wrap: break-word;
 }
 
+.directory-grid .card {
+   background-color: var(--body-card);
+}
+
 
 /* Directory */
-
 .directory-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.directory-list .card > div {
-    display: grid;
+.directory-list .card {
+    display: inline-block;
     grid-template-columns: 1fr;
     gap: 1rem;
+}
+.directory-list .card:nth-child(odd){
+    background-color: var(--body-card);
 }
 
 .directory-list .image {
@@ -133,8 +139,8 @@ main {
 }
 
 .directory-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
 }
 
@@ -146,10 +152,9 @@ main {
 
 .display-method {
     position: relative;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
     border-radius: 12px;
     padding: 4px;
-    isolation: isolate;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 24px 51px 0 rgba(0,0,0,0.19);
     display: inline-flex;
 }
@@ -170,11 +175,12 @@ main {
     left: 4px;
     width: calc(50% - 4px);
     height: calc(100% - 8px);
-    background-color: var(--body-hover, #ccc);
+    background-color: var(--secondary-color);
     border-radius: 10px;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
 }
+
 
 .display-method:has(#list-button.selected)::before {
     transform: translateX(100%);
@@ -190,6 +196,8 @@ main {
 
 .directory-control {
     margin-bottom: 10px;
+    color: var(--body-font);
+
 }
 
 .image {

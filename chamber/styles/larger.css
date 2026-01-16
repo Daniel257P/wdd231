@@ -24,8 +24,7 @@ header {
 
 main { 
     max-width: 1400px; 
-    margin: 0 auto; 
-    display: grid; 
+    margin: 0 auto;  
     grid-template-columns: repeat(2, 1fr); 
     gap: 2rem; 
 } 
@@ -38,16 +37,17 @@ main {
     grid-template-columns: 1fr auto 1fr;
     }
 .directory-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     }
-.directory-list .card > div {
+.directory-list .card {
     grid-template-columns: repeat(4, 20vw);
     }
 }
 
 @media only screen and (min-width: 55rem) {
     .directory-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
