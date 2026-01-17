@@ -5,7 +5,7 @@ header,main,nav,footer {
     }
 
 header {
-    grid-template-columns: 48px auto;
+    grid-template-columns: 48px auto 1fr;
     }
 .humburger {
     display: none;
@@ -13,6 +13,7 @@ header {
 .navigation {
     display: block;
     border-bottom: solid 1px #ddd;
+    min-height: 0;
 }
 .navigation ul {
     display: flex;
@@ -23,8 +24,6 @@ header {
 }
 
 main { 
-    max-width: 1400px; 
-    margin: 0 auto;  
     grid-template-columns: repeat(2, 1fr); 
     gap: 2rem; 
 } 
@@ -43,8 +42,9 @@ main {
 .directory-list .card >div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+    gap: 2.5rem;
     }
 }
 
