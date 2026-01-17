@@ -77,24 +77,23 @@ header span {
 }
 
 .navigation a {
+    font-weight: bold;
     display: block;
     padding: .8rem 10px;
     color: var(--primary-color);
     text-decoration: none;
     border-bottom: solid 1px #ddd;
 }
-.navigation li.current a {
-   color: white;
-}
 
 .navigation li.current {
-    background-color: var(--primary-color);
+    background-color: var(--header-background);
 
 }
 
 .navigation a:hover {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--primary-color);
+    transform: scale(1.05);
 }
 
 main {
@@ -119,7 +118,8 @@ main {
 .images img { 
     margin: 1rem;
     width: 90%; 
-    height: 180px; 
+    aspect-ratio: 16/9;
+    height: auto; 
     object-fit: cover; 
     object-position: center; 
     display: block; 
@@ -187,8 +187,9 @@ main {
 }
 
 .directory-grid .card {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
     background-color: white;
-    display: inline-block;
     align-items: center;
     text-align: center;
 }
@@ -244,7 +245,7 @@ main {
 }
 
 
-.display-method:has(#list-button.selected)::before {
+.display-method.list-active::before {
     transform: translateX(100%);
 }
 
@@ -252,13 +253,10 @@ main {
     transform: scale(1.05);
 }
 
-.display-method button:active {
-    transform: scale(0.95);
-}
-
 .directory-control {
     margin-bottom: 10px;
     color: var(--body-font);
+    font-weight: bold;
 }
 
 

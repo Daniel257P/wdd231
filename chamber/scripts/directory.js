@@ -4,13 +4,20 @@ const directory = document.getElementById("directory");
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
+
         buttons.forEach(btn => btn.classList.remove("selected"));
         button.classList.add("selected");
-        let list = button.innerText === "List";
+
+        const list = button.innerText === "List";
+
         directory.classList.toggle("directory-list", list);
         directory.classList.toggle("directory-grid", !list);
+
+        document.querySelector(".display-method")
+                .classList.toggle("list-active", list);
     });
 });
+
 
 function displayItem(companies) {
     const container = document.createElement("div");
@@ -28,6 +35,8 @@ function displayItem(companies) {
     img.src = companies.image;
     img.alt = companies.name;
     img.loading = "lazy";
+    img.width = 340;
+    img.height = 180;
     h2.innerText = companies.name;
     addressP.innerText = companies.address;
     phoneP.innerText = companies.phone;
