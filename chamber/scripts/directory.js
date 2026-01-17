@@ -12,43 +12,36 @@ buttons.forEach(button => {
     });
 });
 
-function displayItem(item) {
-    const div = document.createElement("div");
-    div.classList.add("card");
-
-    const imageDiv = document.createElement("div");
-    imageDiv.classList.add("image");
-
+function displayItem(companies) {
+    const container = document.createElement("div");
+    const imageContainer = document.createElement("div");
     const img = document.createElement("img");
-    img.src = item.image;
-    img.alt = item.name;
-
-    imageDiv.appendChild(img);
-
-    const infoDiv = document.createElement("div");
-
+    const infocontainer = document.createElement("div");
     const h2 = document.createElement("h2");
-    h2.innerText = item.name;
-
     const addressP = document.createElement("p");
-    addressP.innerText = item.address;
-
     const phoneP = document.createElement("p");
-    phoneP.innerText = item.phone;
-
     const websiteP = document.createElement("a");
-    websiteP.innerText = item.website;
-    websiteP.href = item.website;
 
-    infoDiv.appendChild(h2);
-    infoDiv.appendChild(addressP);
-    infoDiv.appendChild(phoneP);
-    infoDiv.appendChild(websiteP);
 
-    div.appendChild(imageDiv);
-    div.appendChild(infoDiv);
-    
-    directory.appendChild(div);
+    container.classList.add("card");
+    imageContainer.classList.add("images");
+    img.src = companies.image;
+    img.alt = companies.name;
+    h2.innerText = companies.name;
+    addressP.innerText = companies.address;
+    phoneP.innerText = companies.phone;
+    websiteP.innerText = "Visit Website";
+    websiteP.href = companies.website;
+
+
+    imageContainer.appendChild(img);
+    infocontainer.appendChild(h2);
+    infocontainer.appendChild(addressP);
+    infocontainer.appendChild(phoneP);
+    infocontainer.appendChild(websiteP);
+    container.appendChild(imageContainer);
+    container.appendChild(infocontainer);
+    directory.appendChild(container);
 }
 
 fetch("data/members.json").then(async result => {

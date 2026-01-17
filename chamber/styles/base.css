@@ -10,10 +10,8 @@
     --background-color: #f5f5f5;
     --header-font: rgb(0, 0, 0);
     --header-background: rgb(11, 44, 74, 0.068);
-    --header-hover: rgb(165, 163, 146);
     --body-background: rgb(11, 44, 74, 0.068);
     --body-font: rgb(0, 0, 0);
-    --body-hover: rgb(232, 220, 215);
     --body-card: rgb(11, 44, 74, 0.268);
 }
 
@@ -85,9 +83,12 @@ header span {
     text-decoration: none;
     border-bottom: solid 1px #ddd;
 }
+.navigation li.current a {
+   color: white;
+}
 
 .navigation li.current {
-    background-color: #ddd;
+    background-color: var(--primary-color);
 
 }
 
@@ -108,15 +109,21 @@ main {
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 12px;
     border: 1px solid rgba(60, 10, 10, 0.1);
     overflow-wrap: break-word;
 }
-
-.directory-grid .card {
-   background-color: var(--body-card);
+ 
+.images img { 
+    margin: 1rem;
+    width: 90%; 
+    height: 180px; 
+    object-fit: cover; 
+    object-position: center; 
+    display: block; 
+    overflow: hidden;
 }
-
 
 /* Directory */
 .directory-list {
@@ -129,15 +136,49 @@ main {
     display: inline-block;
     grid-template-columns: 1fr;
     gap: 1rem;
+    color: var(--font-color);
 }
 .directory-list .card:nth-child(odd){
     background-color: var(--body-card);
 }
 
-.directory-list .image {
+.directory-list .images {
     display: none !important;
 }
 
+.directory-list .card >div :nth-child(4) {
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: var(--font-color);
+    font-weight: bold;
+
+}
+.directory-list .card >div :nth-child(4)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--secondary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  z-index: -1;
+}
+
+.directory-list .card >div :nth-child(4):hover,
+.directory-list .card >div :nth-child(4):active {
+    color: white;
+  transform: translateY(-4px); 
+}
+
+.directory-list .card >div :nth-child(4):hover::after {
+  transform: scaleX(1);
+}
 .directory-grid {
     display: flex;
     flex-direction: column;
@@ -145,9 +186,29 @@ main {
 }
 
 .directory-grid .card {
+    background-color: white;
     display: inline-block;
     align-items: center;
     text-align: center;
+}
+
+.directory-grid .card >div p {
+   padding: 1rem;
+   width: 100%;
+   height: 70px;
+}
+
+.directory-grid .card >div :nth-child(4) {
+    background-color: var(--primary-color);
+    text-decoration: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: block;
+    color: white;
+}
+.directory-grid .card >div :nth-child(4):hover {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 .display-method {
@@ -197,17 +258,7 @@ main {
 .directory-control {
     margin-bottom: 10px;
     color: var(--body-font);
-
 }
-
-.image {
-    height: 6rem;
-    border: 1px solid black;
-    overflow: hidden;
-    max-width: 215px;
-    display: inline-block;
-}
-
 
 
 /* Footer */
