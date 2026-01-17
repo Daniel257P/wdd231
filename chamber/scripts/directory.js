@@ -32,11 +32,11 @@ function displayItem(companies) {
 
     container.classList.add("card");
     imageContainer.classList.add("images");
-    img.src = companies.image;
-    img.alt = companies.name;
-    img.loading = "lazy";
-    img.width = 340;
-    img.height = 180;
+    img.setAttribute("src", companies.image);
+    img.setAttribute("alt", companies.name);
+    img.setAttribute("loading", "lazy");
+    img.setAttribute("width", "340");
+    img.setAttribute("height", "180");
     h2.innerText = companies.name;
     addressP.innerText = companies.address;
     phoneP.innerText = companies.phone;

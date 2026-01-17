@@ -38,7 +38,7 @@ main {
     }
 .directory-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     }
 .directory-list .card >div {
     display: flex;
@@ -46,19 +46,6 @@ main {
     justify-content: space-between;
     align-items: center;
     }
-}
-
-@media only screen and (min-width: 55rem) {
-    .directory-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media only screen and (min-width: 75rem) {
-    .directory-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
 }
 
 
