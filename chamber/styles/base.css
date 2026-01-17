@@ -107,6 +107,7 @@ main {
     border-radius: 12px;
     padding: 16px;
     width: 100%;
+    min-height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -271,6 +272,7 @@ footer {
     text-align: center;
     padding: 1rem 0;
     row-gap: 2rem;
+    min-height: 120px;
 }
 
 .social {
@@ -281,11 +283,13 @@ footer {
 }
 
 .social img {
+    margin-top: 1rem;
     width: 2.5rem;
     height: auto;
 }
 
 .textcontent {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;

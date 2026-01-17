@@ -27,6 +27,7 @@ function displayItem(companies) {
     imageContainer.classList.add("images");
     img.src = companies.image;
     img.alt = companies.name;
+    img.loading = "lazy";
     h2.innerText = companies.name;
     addressP.innerText = companies.address;
     phoneP.innerText = companies.phone;
