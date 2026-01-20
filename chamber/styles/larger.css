@@ -42,12 +42,80 @@ main {
 .directory-list .card >div {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     align-items: center;
     gap: 2.5rem;
     }
+
+    /*----------------home page hero image------------ */
+.hero picture img {
+    aspect-ratio: 2.5/.8;
+    }
+
+.hero a {
+    position: absolute;
+    font-size: large;
+    top:75%;
+    left: 85%;
+    transform: translate(-75%, -35%);
+    z-index: 10;
+    background-color: var(--call-to-action-color);
+    padding: .5rem 2rem;
+    border-radius: 6px;
+    color: var(--background-color);
+    text-decoration: none;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
     

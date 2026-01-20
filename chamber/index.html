@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the business directory of the Jarrell Chamber of Commerce.">
+    <meta name="description" content="">
     <meta name="author" content="Daniel Paulino">
-    <title>Business Directory | Jarrell Chamber of Commerce</title>
+    <title>Home Page | Jarrell Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">  
     <link rel="stylesheet" href="styles/larger.css">
@@ -17,9 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
      <link rel="icon" href="images/favicon.png">
 
-    <meta property="og:title" content="Directory">
-    <meta property="og:description" content="This is the directory page for Jarrell Chamber of Commerce.">
-    <meta property="og:url" content="https://daniel257p.github.io/wdd231/directory.html">
+    <meta property="og:title" content="Home Page">
+    <meta property="og:description" content="This is the Home page for Jarrell Chamber of Commerce.">
+    <meta property="og:url" content="https://daniel257p.github.io/wdd231/chamber/index.html">
     <meta property="og:image:width" content="600"> 
     <meta property="og:image:height" content="315">
     <meta property="og:image" content="https://daniel257p.github.io/wdd231/images/">
@@ -41,15 +41,16 @@
     </nav>
 
     <main>
-        <h1>Business Directory</h1>
-        <div class="directory-control">
-            <div class="display-method">
-                <button  id="grid-button"  aria-label="Grid View" title="grid-btn">Grid</button>
-                <button  id="list-button" aria-label="List View" title="list-btn">List</button>
-            </div>
+        <div class="hero">
+            <picture>
+                <source srcset="images/small_hero_jarrell.webp" media="(max-widt: 1024px)">
+                <img src="images/large_hero_jarrell.webp" alt="jarrell DownTown" width="1300"> 
+            </picture>
+            <a href="#">Join Now</a> 
         </div>
-        <div id="directory" class="directory-grid"></div>
-        
+        <h1>Home</h1>
+        <section class="weather-section" ></section>
+        <section class="spotlight-section"></section>
     </main>
     <footer>
         <div class="textcontent">
