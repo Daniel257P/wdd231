@@ -29,7 +29,6 @@ function displayItem(companies) {
     const phoneP = document.createElement("p");
     const websiteP = document.createElement("a");
 
-
     container.classList.add("card");
     imageContainer.classList.add("images");
     img.setAttribute("src", companies.image);
@@ -42,7 +41,6 @@ function displayItem(companies) {
     phoneP.innerText = companies.phone;
     websiteP.innerText = "Visit Website";
     websiteP.href = companies.website;
-
 
     imageContainer.appendChild(img);
     infocontainer.appendChild(h2);

@@ -6,7 +6,7 @@
       "phone": "(512) 775-7676",
       "website": "https://CavLawPLLC.com",
       "image": "images/cavlaw_pllc.webp",
-      "membership": 3,
+      "membership": "Gold",
       "category": "Legal Services",
       "description": "CavLaw, PLLC is a full-service law firm dedicated to providing exceptional legal services to individuals and businesses in Texas. Our experienced attorneys specialize in various practice areas, including personal injury, family law, business law, and estate planning. We are committed to advocating for our clients' rights and achieving the best possible outcomes."
     },
@@ -16,7 +16,7 @@
       "phone": "(512) 746-5556",
       "website": "https://www.taylor-products.com",
       "image": "images/taylor_press_products.webp",
-      "membership": 2,
+      "membership": "Silver",
       "category": "Manufacturing, Production & Wholesale",
       "description": "Located in Jarrell, Texas, Taylor Press Products is an ISO 9001:2015 Certified Tier One supplier to the automotive and truck OEM's. We specialize in metal stampings and also offer fabrication, welded assemblies and metal coating."
     },
@@ -26,7 +26,7 @@
         "phone": "(512) 746-3000",
         "website": "https://www.jarrellfamilydentistry.com",
         "image": "images/jarrell_family_dentistry.webp",
-        "membership": 1,
+        "membership": "Bronze",
         "category": "Health & Wellness",
         "description": "At Jarrell Family Dentistry, we are dedicated to providing comprehensive dental care for patients of all ages in a comfortable and friendly environment. Our experienced team offers a wide range of services, including preventive care, restorative treatments, cosmetic dentistry, and orthodontics. We prioritize patient education and work closely with each individual to develop personalized treatment plans that meet their unique needs and goals."
     },
@@ -36,7 +36,7 @@
         "phone": "(512) 746-2200",
         "website": "https://www.sunriseseniorliving.com",
         "image": "images/sunrise_senior_living.webp",
-        "membership": 2,
+        "membership": "Silver",
         "category": "Senior Living & Care",
         "description": "Sunrise Senior Living in Jarrell, TX, offers a warm and welcoming community for seniors seeking assisted living and memory care services. Our dedicated team provides personalized care plans tailored to each resident's needs, promoting independence and enhancing quality of life. With a variety of engaging activities, nutritious dining options, and comfortable living spaces, we strive to create a supportive environment where seniors can thrive and enjoy their golden years."
     },
@@ -46,7 +46,7 @@
         "phone": "(512) 746-3331",
         "website": "https://www.jarrellvetclinic.com",
         "image": "images/jarrell_veterinary_clinic.webp",
-        "membership": 1,
+        "membership": "Bronze",
         "category": "Pet Care & Services",
         "description": "Jarrell Veterinary Clinic is dedicated to providing high-quality veterinary care for pets in the Jarrell, TX area. Our experienced team of veterinarians and staff offer a wide range of services, including preventive care, diagnostics, surgery, and dental care. We are committed to promoting the health and well-being of your furry family members through compassionate care and personalized treatment plans."
     },
@@ -57,7 +57,7 @@
         "phone": "(512) 555-1234",
         "website": "https://www.greenleaflandscaping.com",
         "image": "images/green_leaf_landscaping.webp",
-        "membership": 3,
+        "membership": "Gold",
         "category": "Landscaping & Outdoor Services",
         "description": "Green Leaf Landscaping is your go-to source for all your landscaping needs in Jarrell, TX. We offer a variety of services including lawn care, garden design, tree trimming, and irrigation system installation. Our team of skilled professionals is dedicated to transforming your outdoor spaces into beautiful and functional areas that you can enjoy year-round."
     },
@@ -67,7 +67,7 @@
         "phone": "(512) 555-5678",
         "website": "https://www.jarrellfitness.com",
         "image": "images/jarrell_fitness_center.webp",
-        "membership": 2,
+        "membership": "Silver",
         "category": "Health & Wellness",
         "description": "Jarrell Fitness Center is a state-of-the-art gym located in the heart of Jarrell, TX. We offer a wide range of fitness equipment, group classes, and personal training services to help you achieve your health and fitness goals. Our friendly and knowledgeable staff are here to support you every step of the way on your fitness journey."
     }

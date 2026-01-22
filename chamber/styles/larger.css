@@ -51,6 +51,16 @@ main {
     aspect-ratio: 2.5/.8;
     }
 
+#heroTitle{
+    top:8%;
+    left:5%;
+}
+#heroSubtitle{
+    top:25%;
+    left:6.5%;
+
+}
+
 .hero a {
     position: absolute;
     font-size: large;
@@ -65,57 +75,77 @@ main {
     text-decoration: none;
 }
 
+.weather-section {
+    grid-template-columns: 2fr 1fr 1fr;
+}
 
 
+.spotlight-section {
+    margin-top: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 
+.spotlight-content { 
+    flex-direction: row; 
+    align-items: center;
+ } 
 
+.spotlight-content img { 
+    width: 120px; 
+} 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#spotlights { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+}
 
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
