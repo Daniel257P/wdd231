@@ -100,8 +100,10 @@ main {
     grid-template-columns: repeat(3, 1fr); 
     gap: 1.5rem;
 }
-
-
+#forecast { 
+    padding-top: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+ }
 
 
 }

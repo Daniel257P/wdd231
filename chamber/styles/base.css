@@ -24,7 +24,7 @@ header {
     background-color: var(--header-background);
     display: grid;
     grid-template-columns: 48px 1fr auto;
-    padding: 5px 0 5px 10px;
+    padding: 5px 10px 5px 10px;
     align-items: end;
     border-bottom: solid 1px #ddd;
     column-gap: 8px;
@@ -97,7 +97,6 @@ header span {
 .navigation a:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    transform: scale(1.05);
 }
 
 main {
@@ -308,27 +307,95 @@ h1 {
 
 .weather-section {
     display: grid;
-    background-color: rgb(165, 165, 165);
+    background-color: rgb(255, 255, 255);
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .event-card , .weather-card , .weatherForecast-card{
-    background: var(--secondary-color);
+    background: var(--body-background);
     border: 1px solid rgba(0, 0, 0, .10);
     border-radius: var(--radius);
     padding: 1rem;
     box-shadow: var(--shadow);
-    margin: 1rem 0;
+    margin: 1rem ;
+    text-align: center;
+}
+
+.weather-card h1 {
+    display: block; 
+    width: 100%;
+    margin-bottom: 1rem;
+    border-bottom: solid 2px #333;
+    font-size: x-large;
 }
 
 
+/* weather forecast  */
+
+.weatherForecast-card h1 {
+    display: block; 
+    width: 100%;
+    margin-bottom: 1rem;
+    border-bottom: solid 2px #333;
+    font-size: x-large;
+}
+
+#forecast {
+    display: grid; 
+    grid-template-columns: 1fr;
+     gap: 1rem; 
+     margin-top: 1rem; 
+} 
+
+.forecast-card {
+    background-color: var(--primary-color); 
+    padding: 1rem; 
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    color: white;
+} 
+
+.forecast-card h2 { 
+    font-size: 1.2rem; 
+    margin-bottom: 0.5rem;
+ } 
+
+ .forecast-card p { 
+    font-size: 1rem;
+    margin: 0; 
+}
 
 
+.weather-container {
+     float: left;
+      align-items: center; 
+      gap: 1rem;
+ }
+.weather-text {
+    flex-direction: row;
+    justify-content: center;
+}
 
+.weather-text, h2#town {
+    color: var(--primary-color);
+}
+.weather-text, p#temperature {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+
+.weather-text, p#description {
+    font-size: 1.3rem ;
+}
 
 /* Spotlight Section  */
-
 
 
 .spotlight-card {
