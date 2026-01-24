@@ -4,8 +4,8 @@ const myTemperature =document.querySelector('#temperature');
 const myGraphic = document.querySelector('#graphic');
 
 const myKey = "97b16151bbae61dd4ef4fc696a33e580"
-const myLat = "30.822670"
-const myLong = "-97.603149"
+const myLat = "30.82465"
+const myLong = "-97.60515"
 
 const myURL = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&exclude={part}&appid=${myKey}&units=imperial`
 async function apiFetch() {
@@ -13,7 +13,7 @@ async function apiFetch() {
             const response = await fetch(myURL);
             if (response.ok) {
             const data = await response.json();
-            console.log(data); // testing only
+            console.log(data); 
             displayResults(data); 
             } else {
                 throw Error(await response.text());
@@ -104,14 +104,17 @@ async function loadSpotlights() {
             const card = document.createElement("article");
             card.classList.add("spotlight-card");
             const name = document.createElement("h2");
+            const tagLine = document.createElement("p");
+            tagLine.classList.add("category")
             const contentDiv = document.createElement("div");
             const img = document.createElement("img");
             const textDiv = document.createElement("div");
             const phone = document.createElement("p");
             const address = document.createElement("p");
+            const mLevel = document.createElement("p");
             const link = document.createElement("a");
 
-
+            tagLine.textContent = member.category;
             img.alt = member.name;
             contentDiv.classList.add("spotlight-content");
             img.src = member.image;
@@ -119,23 +122,39 @@ async function loadSpotlights() {
             textDiv.classList.add("spotlight-text");
             phone.textContent = `Phone: ${member.phone}`;
             address.textContent = `Address: ${member.address}`;
+            mLevel.textContent = `Membership: ${member.membership}`
+            mLevel.classList.add("membership");
+
+            if (member.membership === "Gold") {
+                mLevel.classList.add("gold");
+            }
+
+            else if (member.membership === "Silver") {
+                mLevel.classList.add("silver");
+            }
+
             link.href = member.website;
             link.target = "_blank";
             link.textContent = "Visit Website";
 
             textDiv.appendChild(phone);
             textDiv.appendChild(address);
+            textDiv.appendChild(mLevel)
             textDiv.appendChild(link);
 
             contentDiv.appendChild(img);
             contentDiv.appendChild(textDiv);
 
             card.appendChild(name);
+            card.appendChild(tagLine);
             card.appendChild(contentDiv);
 
             spotlightContainer.appendChild(card);
         });
 
+            setTimeout(() => { 
+                document.querySelectorAll(".membership").forEach(el => 
+                    { el.classList.add("loaded");}); }, 50);
     } catch (error) {
         console.error("Error loading spotlight members:", error);
     }

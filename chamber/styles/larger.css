@@ -79,22 +79,6 @@ main {
     grid-template-columns: 2fr 1fr 1fr;
 }
 
-
-.spotlight-section {
-    margin-top: 1.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-
-.spotlight-content { 
-    flex-direction: row; 
-    align-items: center;
- } 
-
-.spotlight-content img { 
-    width: 120px; 
-} 
-
 #spotlights { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
