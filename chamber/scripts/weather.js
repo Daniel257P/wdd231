@@ -7,7 +7,7 @@ const myKey = "97b16151bbae61dd4ef4fc696a33e580"
 const myLat = "30.82465"
 const myLong = "-97.60515"
 
-const myURL = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&exclude={part}&appid=${myKey}&units=imperial`
+const myURL = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&exclude={part}&appid=${myKey}&units=imperial`
 async function apiFetch() {
         try {
             const response = await fetch(myURL);
@@ -35,7 +35,7 @@ async function apiFetch() {
 
 apiFetch();
 
-const forecastURL = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
 
 async function forecastFetch() {
         try {
