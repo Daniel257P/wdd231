@@ -66,13 +66,13 @@ async function forecastFetch() {
             const card = document.createElement("div");
             card.classList.add("forecast-card");
 
-            const h2 = document.createElement("h2");
+            const h3 = document.createElement("h3");
             const p = document.createElement("p");
 
-            h2.textContent = dayName;
+            h3.textContent = dayName;
             p.textContent = `${day.main.temp}°F`;
 
-            card.appendChild(h2);
+            card.appendChild(h3);
             card.appendChild(p);
 
             forecastContainer.appendChild(card);
