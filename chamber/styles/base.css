@@ -498,6 +498,7 @@ footer {
 }
 
 .textcontent {
+    color: var(--background-color);
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
