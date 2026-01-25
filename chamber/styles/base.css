@@ -500,7 +500,7 @@ footer {
     height: auto;
 }
 
-.textcontent {
+.textcontent span{
     color: var(--background-color);
     margin-top: 1rem;
     display: flex;
