@@ -500,11 +500,15 @@ footer {
     height: auto;
 }
 
-.textcontent span{
+.textcontent {
     color: var(--background-color);
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+}
+
+.textcontent a {
+    color: white;
     text-decoration: none;
 }
