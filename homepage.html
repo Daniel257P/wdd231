@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/dates.js" defer></script>
-    <script src="scripts/course.js" defer></script>
+    <script src="scripts/course.js"  type= "module" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
@@ -62,9 +62,17 @@
             <div id="courseContainer"></div>
             <p>Total Credits: <span id="totalCredits">0</span></p>
             <p>Completed courses: <span id="completedCourses">0</span></p>
-
         </section>
-
+        <dialog id="course-details">
+            <div>
+                <h2 id="course-title"></h2>
+                <button id= "course-close">X</button>
+            </div>
+            <p id="course-credits"></p>
+            <p id="course-certificate"></p>
+            <p id="course-info"></p>
+            <p id="course-technology"></p>
+        </dialog>
     </main>
     <footer>
         <div class="social">

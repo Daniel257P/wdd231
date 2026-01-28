@@ -206,3 +206,58 @@ footer {
 .social a:hover {
     background-color: #005461;
 }
+
+
+
+/* ===== Modal ===== */
+
+#course-details::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+}
+
+#course-details {
+    border: none;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    background: #ffffff;
+    width: min(90%, 480px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.35s ease-out;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+#course-Title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #003f4a; 
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+#course-details p {
+    margin: 0.6rem 0;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+#course-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #005461; 
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#course-close:hover {
+    background: #003f4a; 
+}
+
+
