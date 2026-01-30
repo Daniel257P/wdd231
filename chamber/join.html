@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/dates.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
@@ -34,12 +34,11 @@
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="#">Discover</a></li>
-            <li><a href="join.html">Join</a></li>
+            <li><a href="Join.html">Join</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li class="current"><a href="index.html">Home</a></li>
         </ul>
     </nav>
-
     <main>
         <div class="hero">
             <picture>
@@ -52,31 +51,41 @@
                 <p id="heroSubtitle">Resources, connections, and support for local business.</p>
             </div>
         </div>
-        <h2>Home</h2>
-        <section class="weather-section">
-            <article class="event-card">
-                <h2>Events</h2>
-            </article>
-            <article class="weather-card">
-                <h2>Current Weather</h2>
-                <div class="weather-container">
-                    <img id="graphic">
-                </div>
-                <div class="weather-text"></div>
-                    <h2 id="town"></h2>
-                    <br>
-                    <p id="description"></p>
-                    <br>
-                    <p id="temperature"></p>
-                </div>
-            </article>
-            <article class="weatherForecast-card">
-                <h2>Weather Forecast </h2>
-                <div id="forecast"></div> 
-            </article>
-        </section>
-        <section id="spotlights" class="spotlight-section">
-        </section>
+        <div class="form-section">
+            <h2>Merbership Application Form</h2>
+            <form method="GET" action="thanks.html" class="designOne">
+                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                <label> Title/Position<input name="title" type="text" autocomplete="organization-title" pattern="^[A-Za-z -]{7,}$" title="At least 7 characters. Letters, hyphens, and spaces only."></label>
+                <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                <label>Email <input type="email" name="email" required placeholder="example@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Business/Organization Name<input name="bizname" type="text" required="" autocomplete="organization" title="Business or organization name"></label>
+
+
+                <h3>Membership Level</h3>
+                <select name="level" id="levelSelect" required="" title="Membership level selection">
+                    <option value="">Select Membership</option>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+                <h3>Business/Organization Description</h3>
+                <label><textarea name="description" type="description" rows="4" title="Business or organization description" spellcheck="false"></textarea></label>
+                <input type="submit" value="Submit Application">
+            </form>
+            <div class="designTwo">
+                <h2>Membership Level</h2>
+            </div>
+            <div id="mlevel" class="mlevel"></div>
+        </div>
+        <dialog id="level-details">
+            <div>
+                <h2 id="level-title"></h2>
+                <button id= "level-close">X</button>
+            </div>
+            <p id="level-text"></p>
+        </dialog> 
     </main>
     <footer>
         <div class="textcontent">

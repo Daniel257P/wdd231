@@ -89,6 +89,23 @@ main {
     grid-template-columns: repeat(3, 1fr);
  }
 
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+} 
+.designTwo {
+    grid-column: 2;
+    grid-row: 1;
+} 
+
+.mlevel {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.form-section h2 {
+    font-size: x-large;
+}
 
 }
 
