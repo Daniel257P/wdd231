@@ -106,6 +106,13 @@ main {
 .form-section h2 {
     font-size: x-large;
 }
+    .discover-title {
+        font-size: 2rem;
+    }
+    .discover-card {
+        padding: 1.2rem;
+    }
+
 
 }
 

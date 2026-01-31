@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/dates.js" defer></script>
-    <script src="scripts/join.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
@@ -34,7 +33,7 @@
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="#">Discover</a></li>
-            <li><a href="Join.html">Join</a></li>
+            <li><a href="join.html">Join</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li class="current"><a href="index.html">Home</a></li>
         </ul>
@@ -51,43 +50,37 @@
                 <p id="heroSubtitle">Resources, connections, and support for local business.</p>
             </div>
         </div>
-        <div class="form-section">
-            <h2>Merbership Application Form</h2>
-            <form method="GET" action="thanks.html" class="designOne">
-                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-                <label> Title/Position<input name="title" type="text" autocomplete="organization-title" pattern="^[A-Za-z -]{7,}$" title="At least 7 characters. Letters, hyphens, and spaces only."></label>
-                <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
-                <label>Email <input type="email" name="email" required placeholder="example@gmail.com"  title="Your Email" autocomplete="email"></label>
-                <label>Business/Organization Name<input name="bizname" type="text" required="" autocomplete="organization" title="Business or organization name"></label>
-
-
-                <h3>Membership Level</h3>
-                <select name="level" id="levelSelect" required="" title="Membership level selection">
-                    <option value="">Select Membership</option>
-                    <option value="np">NP Membership</option>
-                    <option value="bronze">Bronze</option>
-                    <option value="silver">Silver</option>
-                    <option value="gold">Gold</option>
-                </select>
-                <h3>Business/Organization Description</h3>
-                <label><textarea name="description" type="description" rows="4" title="Business or organization description" spellcheck="false"></textarea></label>
-                <input type="submit" id="submit-btn" value="Submit Application">
-                <label>
-                <input type="hidden" id="timestamp" name="timestamp"></label>
-            </form>
-            <div class="designTwo">
-                <h2>Membership Level</h2>
-            </div>
-            <div id="mlevel" class="mlevel"></div>
+        <div class="discover-main">
+            <h1 class="discover-title">Discover Jarrell</h1>
+            <section class="discover-card">
+                <h2>Local History</h2>
+                <ul>
+                    <li>Founded in the late 1800s as a railroad community</li>
+                    <li>Named after real estate developer E.J. Jarrell</li>
+                    <li>Historic ties to agriculture and ranching</li>
+                    <li>Known for strong community resilience and growth</li>
+                </ul>
+            </section>
+            <section class="discover-card">
+                <h2>Current Demographics</h2>
+                <ul>
+                    <li>Population: ~5,151 (2026 projection)</li>
+                    <li>Median Age: 34.3</li>
+                    <li>Rapid growth: +21% to +28% annually</li>
+                    <li>Median Household Income: $101,653</li>
+                    <li>Racial/Ethnic Composition: 48% White, 36% Hispanic, 12% Black</li>
+                </ul>
+            </section>
+            <section class="discover-card">
+                <h2>Current Events</h2>
+                <ul>
+                    <li>February 13, 2026 : Monthly Chamber networking mixers</li>
+                    <li>March 13, 2026 : Local business spotlights and ribbon cuttings</li>
+                    <li>April 10, 2026: Seasonal community festivals and markets</li>
+                    <li>May 8, 2026: City development updates and public meetings</li>
+                </ul>
+            </section>
         </div>
-        <dialog id="level-details">
-            <div>
-                <h2 id="level-title"></h2>
-                <button id= "level-close">X</button>
-            </div>
-            <p id="level-text"></p>
-        </dialog> 
     </main>
     <footer>
         <div class="textcontent">
