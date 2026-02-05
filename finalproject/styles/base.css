@@ -133,7 +133,6 @@ main {
 
 .main-list summary {
   display: flex;
-  /* list-style: none; */
   cursor: pointer;
   position: relative;
   padding-left: 3rem;
