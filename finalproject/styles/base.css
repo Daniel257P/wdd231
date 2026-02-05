@@ -106,14 +106,56 @@ main {
   margin-left: 1rem;
 }
 
-.details li {
-  margin-left: 3rem;
+.details {
+  list-style: none;
+  padding-left: 0;
 }
 
-.main-list {
-  list-style: none;     
-  padding-left: 0;      
-  margin: 0;
+.details li {
+  position: relative;
+  padding-left: 1.2rem; 
+}
+
+.details li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-color); 
+  border-radius: 50%;
+}
+
+.main-list{
+  list-style: none;
+}
+
+.main-list summary {
+  display: flex;
+  /* list-style: none; */
+  cursor: pointer;
+  position: relative;
+  padding-left: 3rem;
+  align-items: center; 
+  gap: 0.6rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.main-list summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  background: url('/finalproject/images/caret-right-fill.svg') no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
 }
 
 .section h1,
