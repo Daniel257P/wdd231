@@ -129,10 +129,12 @@ main {
 
 .main-list{
   list-style: none;
+  color: var(--text-color);
 }
 
 .main-list summary {
   display: flex;
+  color: var(--text-color);
   cursor: pointer;
   position: relative;
   padding-left: 3rem;
@@ -155,6 +157,14 @@ main {
 
 details[open] summary::before {
   transform: rotate(90deg);
+}
+
+.color-card {
+  background-color: var(--background-color);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 15px var(--primary-color);
 }
 
 .section h1,
