@@ -149,7 +149,7 @@ main {
   left: 0;
   width: 36px;
   height: 36px;
-  background: url('/finalproject/images/caret-right-fill.svg') no-repeat center;
+  background: url('/images/caret-right-fill.svg') no-repeat center;
   background-size: contain;
   flex-shrink: 0;
 }
