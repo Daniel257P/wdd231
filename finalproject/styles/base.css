@@ -222,3 +222,38 @@ main {
   color: #444;
 }
 
+.wireframes-grid {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.wireframe-item {
+  max-width: 320px;
+  text-align: center;
+}
+
+.wireframe-item img {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.wireframe-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.wireframe-item figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondtext-color);
+}
+
+
