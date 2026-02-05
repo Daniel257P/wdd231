@@ -7,10 +7,12 @@
     <meta name="author" content="Daniel Paulino">
     <title>Home Page | Jarrell Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">  
+    <link rel="stylesheet" href="styles/base.css"> 
+    <link rel="stylesheet" href="styles/medium.css"> 
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/dates.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
@@ -41,7 +43,7 @@
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/small_hero_jarrell.webp" media="(max-widt: 1024px)">
+                <source srcset="images/small_hero_jarrell.webp" media="(max-width: 1024px)">
                 <img src="images/large_hero_jarrell.webp" alt="jarrell DownTown" width="1300"> 
             </picture>
             <a href="join.html">Join Now</a> 
@@ -50,36 +52,31 @@
                 <p id="heroSubtitle">Resources, connections, and support for local business.</p>
             </div>
         </div>
-        <div class="discover-main">
-            <h1 class="discover-title">Discover Jarrell</h1>
-            <section class="discover-card">
-                <h2>Local History</h2>
-                <ul>
-                    <li>Founded in the late 1800s as a railroad community</li>
-                    <li>Named after real estate developer E.J. Jarrell</li>
-                    <li>Historic ties to agriculture and ranching</li>
-                    <li>Known for strong community resilience and growth</li>
-                </ul>
-            </section>
-            <section class="discover-card">
-                <h2>Current Demographics</h2>
-                <ul>
-                    <li>Population: ~5,151 (2026 projection)</li>
-                    <li>Median Age: 34.3</li>
-                    <li>Rapid growth: +21% to +28% annually</li>
-                    <li>Median Household Income: $101,653</li>
-                    <li>Racial/Ethnic Composition: 48% White, 36% Hispanic, 12% Black</li>
-                </ul>
-            </section>
-            <section class="discover-card">
-                <h2>Current Events</h2>
-                <ul>
-                    <li>February 13, 2026 : Monthly Chamber networking mixers</li>
-                    <li>March 13, 2026 : Local business spotlights and ribbon cuttings</li>
-                    <li>April 10, 2026: Seasonal community festivals and markets</li>
-                    <li>May 8, 2026: City development updates and public meetings</li>
-                </ul>
-            </section>
+         <div class="discover-container"> 
+            <aside class="discover-sidebar"> 
+                <h2>About Jarrell</h2> 
+                <p>Jarrell is a fast‑growing community in Central Texas, located along the I‑35 corridor between Austin and Waco.</p> 
+                <div class="more-text" id="about-more"> <p> What was once a small rural stop has transformed into a vibrant town attracting families, entrepreneurs, and new developments every year. The community blends small‑town charm with modern conveniences, offering a peaceful lifestyle while staying connected to major Texas cities. Jarrell is known for its welcoming atmosphere, strong local pride, and a business‑friendly environment supported by the Chamber of Commerce. With new neighborhoods, parks, schools, and commercial projects emerging, Jarrell continues to evolve while preserving the values that make it special. </p> 
+                </div> <button class="read-more-btn" data-target="about-more">Read more</button>
+                <h2>Why Live in Jarrell?</h2> 
+                <ul> 
+                    <li>Safe and friendly neighborhoods</li> 
+                    <li>Growing business opportunities</li> 
+                    <li>Affordable living</li> 
+                    <li>Great schools and parks</li> 
+                </ul> 
+                <h2>Current Demographics</h2> 
+                <ul> 
+                    <li>Population: ~5,151 (2026 projection)</li> 
+                    <li>Median Age: 34.3</li> 
+                    <li>Rapid growth: +21% to +28% annually</li> 
+                    <li>Median Household Income: $101,653</li> 
+                </ul> 
+            </aside> 
+            <div class="discover-content"> 
+                <section id="visit-message" class="visit-message"></section> 
+                <section class="discover-grid"></section> 
+            </div> 
         </div>
     </main>
     <footer>

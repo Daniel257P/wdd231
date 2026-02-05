@@ -22,11 +22,6 @@ header {
 .navigation a {
     border: none;
 }
-
-main { 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 2rem; 
-} 
 .directory-control {
     display: flex;
     grid-column: 1 / -1;
@@ -106,14 +101,38 @@ main {
 .form-section h2 {
     font-size: x-large;
 }
-    .discover-title {
-        font-size: 2rem;
-    }
-    .discover-card {
-        padding: 1.2rem;
-    }
 
+.discover-title {
+    font-size: 2rem;
+}
 
+.discover-card {
+    padding: 1.2rem;
+}
+
+.discover-container { 
+    display: grid; 
+    grid-template-columns: 300px 1fr;
+    gap: 2rem; 
+} 
+
+.discover-sidebar { 
+    position: sticky; 
+    top: 2rem; 
+}
+
+.discover-grid {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-template-areas:
+        "card1 card2 card3"
+        "card1 card4 card5"
+        "card6 card7 card8";
+}
+ 
 }
 
 

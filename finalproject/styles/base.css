@@ -26,7 +26,8 @@ body {
   background: white;
   color: var(--secondtext-color);
   line-height: 1.6;
-  display: flex;
+  /* display: flex; */
+  flex-direction: column;
 }
 
 .sidebar { 
@@ -315,5 +316,3 @@ details[open] summary::before {
   font-size: 0.9rem;
   color: var(--secondtext-color);
 }
-
-

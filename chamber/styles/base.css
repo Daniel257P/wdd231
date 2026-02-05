@@ -802,3 +802,90 @@ footer {
     row-gap: 0.5rem;
     text-decoration: none;
 }
+
+.discover-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+.discover-sidebar{
+    background: var(--primary-color);
+     color: whitesmoke;
+}
+
+.discover-sidebar h2 {
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+#visit-message {
+    background: var(--secondary-color);
+    text-align: center;
+}
+
+.more-text {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+.more-text.open {
+    display: block;
+}
+
+.read-more-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.discover-sidebar p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.discover-sidebar li {
+    margin-bottom: 0.6rem;
+}
+
+.discover-sidebar, #visit-message {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.discover-card {
+  margin-top: 1rem;
+}
+
+.discover-grid p, address, button {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: s;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.discover-card:nth-child(1) { grid-area: card1; }
+.discover-card:nth-child(2) { grid-area: card2; }
+.discover-card:nth-child(3) { grid-area: card3; }
+.discover-card:nth-child(4) { grid-area: card4; }
+.discover-card:nth-child(5) { grid-area: card5; }
+.discover-card:nth-child(6) { grid-area: card6; }
+.discover-card:nth-child(7) { grid-area: card7; }
+.discover-card:nth-child(8) { grid-area: card8; }
