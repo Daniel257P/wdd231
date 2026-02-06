@@ -100,7 +100,7 @@ header span {
 }
 
 main {
-    background-color: var(--body-background);
+    /* background-color: var(--body-background); */
     padding: 1rem 1rem;
 }
 
@@ -731,14 +731,14 @@ form #submit-btn:hover {
 
 .discover-title {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--);
     font-size: 2.5rem;
     font-weight: 700;
 }
 
 .discover-card {
-    background: var(--primary-color);
-    color: white;
+    background: var(--body-background);
+    color: var(--body-font);
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -746,7 +746,7 @@ form #submit-btn:hover {
 }
 
 .discover-card h2 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.6rem;
 }
@@ -866,26 +866,35 @@ footer {
     margin-bottom: 0.6rem;
 }
 
-.discover-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-columns: s;
-    grid-template-areas:
-        "card1"
-        "card2"
-        "card3"
-        "card4"
-        "card5"
-        "card6"
-        "card7"
-        "card8";
+.discover-grid, button {
+   cursor: pointer; 
+   padding: 0.6rem 1rem; 
+   border-radius: 6px; 
+   background: var(--primary-color); 
+   color: white; 
+   border: none; 
 }
 
-.discover-card:nth-child(1) { grid-area: card1; }
-.discover-card:nth-child(2) { grid-area: card2; }
-.discover-card:nth-child(3) { grid-area: card3; }
-.discover-card:nth-child(4) { grid-area: card4; }
-.discover-card:nth-child(5) { grid-area: card5; }
-.discover-card:nth-child(6) { grid-area: card6; }
-.discover-card:nth-child(7) { grid-area: card7; }
-.discover-card:nth-child(8) { grid-area: card8; }
+.discover-card button:hover { 
+    background: var(--secondary-color); 
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.discover-grid {
+    display: grid;
+    width: 100%;
+    border-radius: 8px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1" "card2""card3"
+        "card4" "card5" "card6"
+        "card7" "card8";
+}
