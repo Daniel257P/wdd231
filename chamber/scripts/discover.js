@@ -9,7 +9,7 @@ items.forEach(item => {
     card.innerHTML = `
         <h2>${item.name}</h2>
         <figure>
-            <img src="${item.image}" alt="${item.name}">
+            <img loading="lazy" src="${item.image}" alt="${item.name}">
         </figure>
         <address>${item.address}</address>
         <p>${item.description}</p>
