@@ -818,9 +818,6 @@ form #submit-btn:hover {
     padding: 1.5rem;
     border-radius: 8px;
 }
-.discover-card {
-  margin-top: 1rem;
-}
 
 .discover-grid p, address, button {
     margin-top: 1.5rem;
