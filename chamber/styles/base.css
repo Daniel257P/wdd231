@@ -740,6 +740,12 @@ form #submit-btn:hover {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+}
+
+.discover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
 .discover-card h2 {
@@ -756,48 +762,6 @@ form #submit-btn:hover {
 
 .discover-card li {
     line-height: 1.4;
-}
-
-
-.discover-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-
-/* Footer */
-
-footer {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    row-gap: 2rem;
-    min-height: 120px;
-}
-
-.social {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
-}
-
-.social img {
-    margin-top: 1rem;
-    width: 2.5rem;
-    height: auto;
-}
-
-.textcontent {
-    color: var(--background-color);
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
-    text-decoration: none;
 }
 
 .discover-container {
@@ -884,7 +848,6 @@ footer {
     border-radius: 6px;
 }
 
-
 .discover-grid {
     display: grid;
     width: 100%;
@@ -894,4 +857,39 @@ footer {
         "card1" "card2""card3"
         "card4" "card5" "card6"
         "card7" "card8";
+}
+
+/* Footer */
+
+footer {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    row-gap: 2rem;
+    min-height: 120px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.social img {
+    margin-top: 1rem;
+    width: 2.5rem;
+    height: auto;
+}
+
+.textcontent {
+    color: var(--background-color);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    text-decoration: none;
 }
