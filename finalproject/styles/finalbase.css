@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    font-family: "open sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #0A84FF;
+    --secondary-color: #00D68F;
+    --seconady-color-opacity:rgb(0, 214, 143, 0.1); 
+    --accent-color: #FFB800;
+    --background-color: #0B0E11;
+    --text-color:#E6E6E6;
+    --secondbackground-color: var(--text-color);
+    --secondtext-color:var(--background-color);
+    --radius: 12px;
+    --shadow: 0 3px 10px rga(0,0,0,0,.12);
+}
+
+/* ===================================
+Header DePIN Hub
+=================================== */
+header {
+    color: var(--header-font);
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: auto 48px;
+    padding: 10px 10px 5px 10px;
+    align-items: end;
+    column-gap: 8px;
+    align-items: center;
+}
+
+header img {
+    display: block;
+    height: auto;
+}
+
+/* ===================================
+Hamburger Navigation (MOBILE)
+=================================== */
+
+.humburger {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-bottom: .8rem;
+}
+
+.humburger::before {
+    content: "\2630";
+}
+
+.humburger.show::before {
+    content: "\2715";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    background-color: var(--background-color);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.navigation li.current {
+    background-color: var(--primary-color);
+}
+.navigation a {
+    font-weight: bold;
+    display: block;
+    padding: .8rem 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation a:hover {
+    background-color: var(--secondary-color);
+    color: var(--secondtext-color);
+}
+
+.hero {
+    position: relative;         
+    width: 100%;                
+    height: 40vh;              
+    min-height: 300px;         
+    overflow: hidden;           
+    margin: 0;                  
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;                   
+    background: rgba(0, 0, 0, 0.65); 
+    z-index: 1;
+}
+
+.hero picture,
+.hero picture img {
+    position: absolute;        
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          
+    object-position: center;    
+    display: block;
+    z-index: 0;                 
+}
+
+
+.hero-text {
+    position: absolute;
+    inset: 0;                   
+    z-index: 2;                
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;        
+    text-align: center;
+    color: white;               
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+
+.hero-text h1 {
+    font-size: clamp(2rem, 6vw, 4.5rem); 
+    margin: 0;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    max-width: 700px;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.cta { 
+    display: inline-block; 
+    padding: .75rem 1.5rem; 
+    background: #0A84FF; 
+    color: white; 
+    border-radius: 6px; 
+    text-decoration: none; 
+    font-weight: 600; 
+}
+
+
+
+/* ---------------------- */ /* MAIN CONTENT */ /* ---------------------- */ 
+
+main { 
+    display: grid;
+    background-color: whitesmoke;
+} 
+
+ /* FEATURES */ 
+
+ .features { 
+    padding: 2rem 1.25rem; 
+    display: flex; 
+    text-align: center;
+    flex-direction: column;
+    gap: 1.5rem; 
+    margin-bottom: 2rem;
+} 
+.feature h3 { 
+    font-size: 1.2rem; 
+    margin-bottom: .25rem; 
+}
+
+/* =======================
+    PROJECT + TRENDING  
+========================== */
+
+ .content-grid { 
+    background-color: var(--text-color);
+    margin: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem 1.25rem; 
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+    justify-items: center; 
+    align-items: center;
+} 
+
+.project-card { 
+    width: 80%;
+    text-align: center;
+    color: var(--text-color);
+    background: var(--background-color); 
+    padding: 1.5rem; 
+    border-radius: 10px; 
+}
+
+.chart-placeholder { 
+    margin-top: 1rem; 
+    height: 150px; 
+    background: #1A1F26; 
+    border-radius: 8px; 
+}
+.trending {
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--background-color);
+}
+.trending ul { 
+    padding: 0;
+    list-style: none; 
+    display: flex; 
+    flex-direction: column; 
+    gap: .75rem; 
+}
+
+.trending h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+
+ /* NEWSLETTER */ 
+ .newsletter { 
+    color: var(--text-color);
+    background-color: var(--background-color);
+    justify-self: center;
+    width: 70%;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    padding: 2rem 1.25rem; 
+    text-align: center; 
+}
+
+.newsletter h3 {
+    margin-bottom: 2rem;
+}
+
+.newsletter form { 
+    margin-top: 1rem; 
+    display: flex; 
+    flex-direction: column; 
+    gap: .75rem; 
+}
+.newsletter input { 
+    padding: .75rem; 
+    border-radius: 6px; 
+    border: none; 
+}
+.newsletter button { 
+    padding: .75rem; 
+    background: #00D68F; 
+    border: none; 
+    border-radius: 6px; 
+    color: #0B0E11; 
+    font-weight: 600; 
+}
+
+
+/* ========================
+        FOOTER 
+======================== */
+
+
+ footer { 
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 2rem 1.25rem; 
+    text-align: center; 
+    justify-items: center; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.footer-center, .footer-right, .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center; 
+    text-align: center;
+    margin: 1rem;
+    margin-left: 0;
+}
+
+.footer-center img {
+    width: 2rem;
+    height: auto;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+.footer-right a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.footer-right a:active::after, 
+.footer-right a:hover::after {
+  width: 100%;
+}
+
+.footer-center img:hover {
+    gap: 2rem;
+    transform: scale(1.1);
+    filter: invert(39%) sepia(93%) saturate(2470%) hue-rotate(186deg) brightness(103%) contrast(102%)
+}
+

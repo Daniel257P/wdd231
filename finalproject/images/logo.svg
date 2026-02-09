@@ -1,0 +1,23 @@
+<svg width="260" height="64" viewBox="0 0 295 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stylized D grid -->
+  <!-- Left vertical bar -->
+  <rect x="18" y="18" width="6" height="28" rx="2" fill="#0A84FF"/>
+
+  <!-- Top horizontal -->
+  <rect x="24" y="18" width="18" height="6" rx="2" fill="#00D68F"/>
+
+  <!-- Bottom horizontal -->
+  <rect x="24" y="40" width="18" height="6" rx="2" fill="#FFB800"/>
+
+  <!-- Middle curve suggestion (two blocks) -->
+  <rect x="34" y="27" width="8" height="6" rx="2" fill="#0A84FF" opacity="0.9"/>
+  <rect x="34" y="33.5" width="8" height="6" rx="2" fill="#00D68F" opacity="0.9"/>
+
+  <!-- Wordmark -->
+  <text x="70" y="30" fill="#E6E6E6" font-family="Poppins, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="600" font-size="20">
+    DePIN Hub
+  </text>
+  <text x="70" y="48" fill="#0A84FF" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="400" font-size="12" letter-spacing="0.12em">
+    DECENTRALIZED INFRASTRUCTURE
+  </text>
+</svg>
