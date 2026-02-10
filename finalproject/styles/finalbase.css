@@ -95,7 +95,7 @@ Hamburger Navigation (MOBILE)
 .hero {
     position: relative;         
     width: 100%;                
-    height: 40vh;              
+    height: 50vh;              
     min-height: 300px;         
     overflow: hidden;           
     margin: 0;                  
@@ -135,32 +135,31 @@ Hamburger Navigation (MOBILE)
     color: white;               
     padding: 1.5rem;
     gap: 1rem;
+    line-height: 1.5;
 }
 
 
 .hero-text h1 {
     font-size: clamp(2rem, 6vw, 4.5rem); 
     margin: 0;
-    line-height: 1.1;
 }
 
 .hero-text p {
-    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-size: clamp(.9rem, 2vw, 1rem);
     max-width: 700px;
     margin: 0.5rem 0 1.5rem;
 }
 
 .cta { 
     display: inline-block; 
-    padding: .75rem 1.5rem; 
+    padding: .55rem 1.5rem; 
     background: #0A84FF; 
     color: white; 
     border-radius: 6px; 
     text-decoration: none; 
-    font-weight: 600; 
+    font-weight: 600;
+    margin-bottom: 1rem; 
 }
-
-
 
 /* ---------------------- */ /* MAIN CONTENT */ /* ---------------------- */ 
 
@@ -179,6 +178,7 @@ main {
     gap: 1.5rem; 
     margin-bottom: 2rem;
 } 
+
 .feature h3 { 
     font-size: 1.2rem; 
     margin-bottom: .25rem; 
@@ -236,8 +236,6 @@ main {
     margin-bottom: 2rem;
 }
 
-
-
  /* NEWSLETTER */ 
  .newsletter { 
     color: var(--text-color);
@@ -274,11 +272,9 @@ main {
     font-weight: 600; 
 }
 
-
 /* ========================
         FOOTER 
 ======================== */
-
 
  footer { 
     color: var(--text-color);
@@ -310,29 +306,28 @@ main {
     color: var(--text-color);
 }
 
-
 .footer-right a {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 4px;
-  color: var(--text-color);
-  text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 .footer-right a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background-color: var(--accent-color);
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
 }
 
 .footer-right a:active::after, 
 .footer-right a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .footer-center img:hover {
@@ -340,4 +335,3 @@ main {
     transform: scale(1.1);
     filter: invert(39%) sepia(93%) saturate(2470%) hue-rotate(186deg) brightness(103%) contrast(102%)
 }
-
