@@ -187,35 +187,28 @@ main {
 /* =======================
     PROJECT + TRENDING  
 ========================== */
-
- .content-grid { 
-    background-color: var(--text-color);
-    margin: 2rem;
-    margin-bottom: 2rem;
-    padding: 2rem 1.25rem; 
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; 
-    justify-items: center; 
-    align-items: center;
-} 
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
 
 .project-card { 
-    width: 80%;
+    width: 90%;
+    justify-self: center;
     text-align: center;
     color: var(--text-color);
     background: var(--background-color); 
     padding: 1.5rem; 
+    margin: 1rem auto;
     border-radius: 10px; 
 }
-
-.chart-placeholder { 
-    margin-top: 1rem; 
-    height: 150px; 
-    background: #1A1F26; 
-    border-radius: 8px; 
+#projectChart {
+    max-width: 100%;
+    height: auto;
 }
+
 .trending {
     color: var(--text-color);
     border-radius: 8px;
@@ -234,6 +227,56 @@ main {
 .trending h3 {
     text-align: center;
     margin-bottom: 2rem;
+}
+
+.trending-list li {
+  display: grid;
+  grid-template-columns: .2fr 1fr 1fr 1fr;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #222;
+  align-items: center;
+}
+
+.t-name {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.t-mcap {
+  text-align: right;
+  opacity: 0.8;
+}
+
+.t-growth {
+  text-align: right;
+  font-weight: 600;
+}
+
+.t-growth.positive {
+  color: #4caf50;
+}
+
+.t-growth.negative {
+  color: #e53935;
+}
+
+.t-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+.trending-header {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1.2fr 2fr 1fr;
+  padding: 0.4rem 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #aaa;
+  border-bottom: 1px solid #222;
 }
 
  /* NEWSLETTER */ 
