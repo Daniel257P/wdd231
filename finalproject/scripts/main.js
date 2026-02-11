@@ -18,6 +18,31 @@ featuresSection.innerHTML = `
 
 container.appendChild(featuresSection);
 
+const cards = featuresSection.querySelectorAll(".feature");
+
+const learnBasicsCard = cards[0];
+
+cards[1].addEventListener("click", () => {
+    window.location.href = "projectdirectory.html";
+});
+
+// Redirect Track Market Data
+cards[2].addEventListener("click", () => {
+    window.location.href = "marketdata.html";
+});
+
+const depinDialog = document.querySelector("#depinDialog");
+const closeDialog = document.querySelector("#closeDialog");
+
+learnBasicsCard.addEventListener("click", () => {
+    depinDialog.showModal();
+});
+
+closeDialog.addEventListener("click", () => {
+    depinDialog.close();
+});
+
+
 // Depin Projects ID list 
 
 const depinProjects = [

@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="styles/finalbase.css">  
     <link rel="stylesheet" href="styles/finallarge.css">
     <script src="scripts/menu.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
-    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/projects.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
@@ -40,37 +39,16 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <main>
-        <div class="hero"> 
-            <picture>
-                <source srcset="images/small_hero.webp" media="(max-width: 1080px)">
-                <img src="images/larger_hero.webp" alt="jarrell DownTown" width="1300"> 
-            </picture>
-            <div class="hero-text">
-                <h1>Discover the Future of Decentralized Infrastructure</h1> 
-                <p>Learn how DePIN projects are transforming real-world networks using blockchain technology.</p> 
-                <a href="projectdirectory.html" class="cta">Explore</a> 
-            </div>
-        </div> 
-         <section id="features"></section> 
-        <section id="content-grid"></section> 
-         <section class="newsletter"> 
-            <h3>Subscribe to our Newsletter</h3> 
-            <p>Get the latest product updates, company news, and special offers delivered right to your inbox.</p> 
-            <form> 
-                <input type="email" placeholder="Enter your email"> 
-                <button type="submit">Subscribe</button> 
-            </form> 
-        </section>
-        <dialog id="depinDialog">
-            <h2>What is DePIN?</h2>
-            <p> DePIN stands for <strong>Decentralized Physical Infrastructure Networks</strong>.
-                Instead of big companies owning infrastructure like wireless networks, storage,
-                sensors, or compute power, DePIN lets everyday people contribute hardware and
-                get rewarded with tokens. It’s a way to build real‑world infrastructure using
-                blockchain incentives.</p>
-            <button id="closeDialog">Close</button>
-        </dialog>
+    <main class="projects-main">
+    <div class="header-project">
+        <h1>Projects</h1>
+        <p class="page-intro">
+            Explore major DePIN networks and learn how decentralized infrastructure is being built by communities around the world.</p>
+    </div>
+    <div class="directory-wrapper">
+        <div id="project-filters" class="project-filters"></div>
+        <section id="project-directory" class="project-directory"></section>
+    </div>
     </main>
     <footer>
         <div class="footer-left"> 

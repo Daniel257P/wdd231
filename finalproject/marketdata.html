@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Daniel Paulino">
+    <title>Home Page | Depin Hub</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/finalbase.css">  
+    <link rel="stylesheet" href="styles/finallarge.css">
+    <script src="scripts/menu.js" defer></script>
+    <script type="module" src="scripts/marketdata.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Home Page">
+    <meta property="og:description" content="This is the Home page for DePIN Hub">
+    <meta property="og:url" content="https://daniel257p.github.io/wdd231/finalproject/index.html">
+    <meta property="og:image:width" content="600"> 
+    <meta property="og:image:height" content="315">
+    <meta property="og:image" content="https://daniel257p.github.io/wdd231/finalproject/images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.svg" alt="DePIN Hub Logo" width="200" height="200">
+        </a>
+        <button id="ham-btn" class="humburger" title="ham-btn" aria-label="toggle navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="marketdata.html">Market Data</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+      <h1>Market Data</h1> 
+    </main>
+    <footer>
+        <div class="footer-left"> 
+            <h4>DePIN Hub</h4> 
+            <p>Address: 123 Main Street, City</p>
+            <p>Phone: +1 234 567 890</p>
+            <p>&copy; <span id="currentyear"></span> DePIN Hub</p>
+            <p>Last Modification:<span id="lastmodified"></span></p>
+        </div> 
+        <div class="footer-center"> 
+            <h4>Follow Us</h4>
+            <a href="#" target="_blank"><img src="images/youtube.svg" alt="YouTube Icon" width="16" height="16"></a>
+            <a href="#" target="_blank"><img src="images/twitter-x.svg" alt="twitter-x Icon" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/daniel-paulinop" target="_blank"><img src="images/instagram.svg" alt="LinkedIn Icon" width="16" height="16"></a>
+        </div>
+        <div class="footer-right"> 
+            <h4>About Us</h4>
+            <a href="#">Home</a> 
+            <a href="#">Projects</a> 
+            <a href="#">About us</a> 
+            <a href="#">Contact Us</a>  
+        </div>  
+    </footer>
+</body>
+</html>
