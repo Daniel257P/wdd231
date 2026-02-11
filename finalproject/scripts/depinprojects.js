@@ -1,3 +1,25 @@
+// Features Section 
+import { featuresData } from "../data/content.mjs";
+
+const container = document.querySelector("#features");
+const featuresSection = document.createElement("section");
+featuresSection.classList.add("features");
+
+featuresSection.innerHTML = `
+    ${featuresData.map(feature => `
+        <div class="feature" style="background-image: url('${feature.image}')">
+            <div class="feature-content">
+                <h3>${feature.title}</h3>
+                <p>${feature.description}</p>
+            </div>
+        </div>
+    `).join("")}
+`;
+
+container.appendChild(featuresSection);
+
+// Depin Projects ID list 
+
 const depinProjects = [
   "helium",
   "akash-network",
@@ -12,35 +34,88 @@ const depinProjects = [
   "hivemapper"
 ];
 
-async function fetchAllMarketData() {
-  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${depinProjects.join(",")}&price_change_percentage=7d`;
+// cache fetch with localStorage
+
+async function cachedFetch(url, key, ttl = 60000) {
+
+  const cached = localStorage.getItem(key);
+  const time = localStorage.getItem(key + "_time");
+
+
+  if (cached && time && Date.now() - time < ttl) {
+    return JSON.parse(cached);
+  }
 
   try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error("Failed to fetch market data");
 
-    return await res.json(); 
+    const res = await fetch(url, {
+      headers: {
+        "Accept": "application/json"
+      }
+    });
 
-  } catch (error) {
-    console.error("Market fetch error:", error);
-    return [];
+    if (!res.ok) throw new Error("API Error");
+
+    const data = await res.json();
+
+    localStorage.setItem(key, JSON.stringify(data));
+    localStorage.setItem(key + "_time", Date.now());
+
+    return data;
+
+  } catch (err) {
+
+    console.error("Fetch failed:", err);
+
+    return cached ? JSON.parse(cached) : null;
   }
 }
 
-console.log("Fetching market data for:", depinProjects);    
+// Fetch market data for all projects
+
+async function fetchAllMarketData() {
+
+  const url =
+    `https://api.coingecko.com/api/v3/coins/markets` +
+    `?vs_currency=usd` +
+    `&ids=${depinProjects.join(",")}` +
+    `&price_change_percentage=7d`;
+
+  return await cachedFetch(url, "market_data", 120000);
+}
+
+
+console.log("Fetching market data for:", depinProjects);
+
 fetchAllMarketData().then(data => {
+
+  if (!data || data.length === 0) {
+    document.querySelector("#content-grid").innerHTML =
+      "<p>Data unavailable.</p>";
+    return;
+  }
+
   console.log("Market data received:", data);
+
   renderContentGrid(data);
- 
-}).catch(error => {
-  console.error("Error fetching market data:", error);
+
+}).catch(err => {
+  console.error("Init error:", err);
 });
 
 function renderContentGrid(projects) {
+
   const container = document.querySelector("#content-grid");
-  container.innerHTML = ""; 
+  container.innerHTML = "";
+
+  if (!projects || projects.length === 0) {
+    container.innerHTML = "<p>No data found.</p>";
+    return;
+  }
 
   const mainProject = projects[0];
+
+  // Get top 10 trending by market cap
 
   const trending = [...projects]
     .sort((a, b) => b.market_cap - a.market_cap)
@@ -49,116 +124,185 @@ function renderContentGrid(projects) {
   const section = document.createElement("section");
   section.classList.add("content-grid");
 
-  // ============================
-  // Main Project Card
-  // ============================
+
+  // Maind content card
+
   const card = document.createElement("div");
   card.classList.add("project-card");
 
- card.innerHTML = `
-  <h2 id="project-title">${mainProject.name}</h2>
-  <div class="chart-container">
-    <canvas id="projectChart"></canvas>
-  </div>
-`;
+  card.innerHTML = `
+    <h2 id="project-title">${mainProject.name}</h2>
 
- // ============================
-// Trending Sidebar
-// ============================
-const aside = document.createElement("aside");
-aside.classList.add("trending");
+    <div class="chart-container">
 
-const trendingList = trending.map(p => {
-    
+      <div id="loader">Loading...</div>
+
+      <canvas id="projectChart"></canvas>
+
+    </div>
+  `;
+
+  // Trending Sidebar
+
+  const aside = document.createElement("aside");
+  aside.classList.add("trending");
+
+  const trendingList = trending.map(p => {
+
     const growth = p.price_change_percentage_7d_in_currency;
 
     return `
       <li class="trending-item" data-id="${p.id}">
-        <img src="${p.image}" alt="${p.name} logo" class="t-logo">
+
+        <img src="${p.image}"
+             alt="${p.name} logo"
+             class="t-logo">
+
         <span class="t-name">${p.name}</span>
-        <span class="t-mcap">$${p.market_cap.toLocaleString()}</span>
-        <span class="t-growth ${growth >= 0 ? "positive" : "negative"}">
-          ${growth ? growth.toFixed(2) + "%" : "N/A"}
+
+        <span class="t-mcap">
+          $${p.market_cap.toLocaleString()}
         </span>
+
+        <span class="t-growth ${growth >= 0 ? "positive" : "negative"}">
+          ${growth !== null ? growth.toFixed(2) + "%" : "N/A"}
+        </span>
+
       </li>
     `;
-  }) 
-  .join("");
-  
-aside.innerHTML = `
-  <h3>Top Trending</h3>
-  <div class="trending-header">
-        <span>Project Name</span>
-        <span>Market Cap</span>
-        <span>7d Growth</span>
+
+  }).join("");
+
+
+  aside.innerHTML = `
+    <h3>Top Trending</h3>
+
+    <div class="trending-header">
+      <span>Project</span>
+      <span>Market Cap</span>
+      <span>7d</span>
     </div>
 
     <ul class="trending-list">
-        ${trendingList}
+      ${trendingList}
     </ul>
-    `;
-    
-  section.appendChild(card);
-  section.appendChild(aside);
-  container.appendChild(section);
+  `;
 
-  document.querySelectorAll(".trending-item").forEach(item => {
-  item.addEventListener("click", () => {
+  // Event Listener for trending items
+
+  aside.addEventListener("click", e => {
+
+    const item = e.target.closest(".trending-item");
+
+    if (!item) return;
+
     const id = item.dataset.id;
-    
-    const name = item.querySelector(".t-name").textContent; 
+
+    const name =
+      item.querySelector(".t-name").textContent;
+
     document.getElementById("project-title").textContent = name;
 
     loadProjectChart(id);
-  });
-});
 
+  });
+
+  section.appendChild(card);
+  section.appendChild(aside);
+
+  container.appendChild(section);
 
   loadProjectChart(mainProject.id);
 }
 
-async function loadProjectChart(id) {
-  const url = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=7`;
 
-  const res = await fetch(url);
-  const data = await res.json();
+// Load chart data for each project
+
+async function loadProjectChart(id) {
+
+  const loader = document.getElementById("loader");
+  if (loader) loader.style.display = "block";
+
+  const url =
+    `https://api.coingecko.com/api/v3/coins/${id}/market_chart` +
+    `?vs_currency=usd&days=7`;
+
+  const data = await cachedFetch(
+    url,
+    "chart_" + id,
+    300000 
+  );
+
+  if (!data || !data.prices) {
+    if (loader) loader.style.display = "none";
+    return;
+  }
 
   const prices = data.prices.map(p => p[1]);
+
   const labels = data.prices.map(p => {
-    const date = new Date(p[0]);
-    return `${date.getMonth()+1}/${date.getDate()}`;
+
+    const d = new Date(p[0]);
+
+    return `${d.getMonth() + 1}/${d.getDate()}`;
   });
 
   updateChart(labels, prices);
+
+  if (loader) loader.style.display = "none";
 }
 
 let chartInstance = null;
 
 function updateChart(labels, prices) {
-  const ctx = document.getElementById("projectChart").getContext("2d");
+
+  const canvas = document.getElementById("projectChart");
+
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
 
   if (chartInstance) {
     chartInstance.destroy();
   }
 
   chartInstance = new Chart(ctx, {
+
     type: "line",
+
     data: {
       labels,
       datasets: [{
+        pointRadius: 0,
+        pointHoverRadius: 4,
         label: "Price (USD)",
         data: prices,
-        borderColor: "#4caf50",
+        borderColor: "#00D68F", 
         borderWidth: 2,
-        fill: false,
-        tension: 0.3
+        tension: 0.3,
+        fill: false
       }]
     },
+
     options: {
       responsive: true,
+
       scales: {
-        y: { beginAtZero: false }
+        y: {
+          beginAtZero: false
+        }
       }
     }
+
   });
 }
+
+setInterval(async () => {
+
+  const data = await fetchAllMarketData();
+
+  if (data?.length) {
+    renderContentGrid(data);
+  }
+
+}, 180000); 

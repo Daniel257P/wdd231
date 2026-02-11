@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #0A84FF;
-    --secondary-color: #00D68F;
+    --primary-color: rgb(10, 132, 255);
+    --secondary-color: rgb(0, 214, 143);
     --seconady-color-opacity:rgb(0, 214, 143, 0.1); 
     --accent-color: #FFB800;
     --background-color: #0B0E11;
@@ -18,9 +18,9 @@
     --shadow: 0 3px 10px rga(0,0,0,0,.12);
 }
 
-/* ===================================
-Header DePIN Hub
-=================================== */
+
+/* ----------------------  HEADER DEPIN HUB---------------------- */ 
+
 header {
     color: var(--header-font);
     background-color: var(--background-color);
@@ -36,10 +36,7 @@ header img {
     display: block;
     height: auto;
 }
-
-/* ===================================
-Hamburger Navigation (MOBILE)
-=================================== */
+/* ----------------------  HAMBURGER NAVIGATION ---------------------- */ 
 
 .humburger {
     background: none;
@@ -161,32 +158,74 @@ Hamburger Navigation (MOBILE)
     margin-bottom: 1rem; 
 }
 
-/* ---------------------- */ /* MAIN CONTENT */ /* ---------------------- */ 
+/* ----------------------  MAIN CONTENT---------------------- */ 
 
 main { 
     display: grid;
     background-color: whitesmoke;
 } 
 
- /* FEATURES */ 
+/* ----------------------  FEATURES---------------------- */ 
 
- .features { 
-    padding: 2rem 1.25rem; 
-    display: flex; 
-    text-align: center;
-    flex-direction: column;
-    gap: 1.5rem; 
-    margin-bottom: 2rem;
-} 
-
-.feature h3 { 
-    font-size: 1.2rem; 
-    margin-bottom: .25rem; 
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
 }
 
-/* =======================
-    PROJECT + TRENDING  
-========================== */
+.feature {
+    position: relative;
+    height: 220px;
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 132, 255, 0.45);
+}
+
+.feature:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.feature:hover::before {
+    background: rgba(0, 214, 143, 0.25);
+}
+
+.feature-content {
+    position: absolute;
+    text-align: center;
+    margin: 1rem;
+    left: 1rem;
+    right: 1rem;
+    color: white;
+    z-index: 2;
+}
+
+.feature-content h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.feature-content p {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+}
+
+
+/* ---------------------- PROJECT + TRENDING ---------------------- */ 
+
 .content-grid {
   display: flex;
   flex-direction: column;
@@ -279,7 +318,7 @@ main {
   border-bottom: 1px solid #222;
 }
 
- /* NEWSLETTER */ 
+/* ----------------------NEWSLETTER---------------------- */ 
  .newsletter { 
     color: var(--text-color);
     background-color: var(--background-color);
@@ -315,9 +354,8 @@ main {
     font-weight: 600; 
 }
 
-/* ========================
-        FOOTER 
-======================== */
+/* ----------------------FOOTER---------------------- */ 
+
 
  footer { 
     color: var(--text-color);

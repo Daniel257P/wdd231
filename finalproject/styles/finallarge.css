@@ -104,9 +104,12 @@ footer {
     align-items: flex-start; 
 }
  
- .features { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.features {
+     grid-template-columns: repeat(3, 1fr); 
+
 } 
+.feature { 
+    height: 80px; 
+}
 
 }
