@@ -768,6 +768,7 @@ dialog p {
     font-weight: 600;
 }
 
+
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -787,6 +788,7 @@ dialog p {
     background: #fff;
     outline: none;
 }
+
 .contact-form .btn-primary {
     width: 100%;
     padding: 0.9rem;
@@ -837,6 +839,12 @@ dialog p {
     border-left: 4px solid var(--accent, #4a7cff);
 }
 
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
 .form-results {
     max-width: 600px;
     margin: 3rem auto;

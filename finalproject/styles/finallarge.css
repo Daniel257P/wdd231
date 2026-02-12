@@ -145,9 +145,4 @@ footer {
     font-size: 1.5rem;
 }
 
-.contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
 }
