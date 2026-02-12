@@ -743,3 +743,114 @@ dialog p {
     text-decoration: underline;
 }
 
+
+/* form section  */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem 0;
+    align-items: start;
+}
+
+.contact-form {
+    background: var(--card-bg, #ffffff);
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.contact-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    background: #fafafa;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent, #4a7cff);
+    background: #fff;
+    outline: none;
+}
+.contact-form .btn-primary {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--accent, #4a7cff);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.contact-form .btn-primary:hover {
+    background: var(--accent-hover, #3a63d6);
+}
+
+.contact-info {
+    background: var(--card-bg, #ffffff);
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.contact-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-info ul {
+    margin: 1rem 0;
+    padding-left: 1.2rem;
+}
+
+.contact-info li {
+    margin-bottom: 0.6rem;
+}
+
+.contact-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--accent-bg, #f5f7ff);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent, #4a7cff);
+}
+
+.form-results {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.form-results h2 {
+    margin-bottom: 1.5rem;
+}
+
+.form-results p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}

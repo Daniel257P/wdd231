@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="styles/finalbase.css">  
     <link rel="stylesheet" href="styles/finallarge.css">
     <script src="scripts/menu.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
-    <script type="module" src="scripts/depinprojects.js"></script>
+    <script src="scripts/contact.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
@@ -41,7 +40,36 @@
         </ul>
     </nav>
     <main>
-        <h1>Contact Us</h1>
+        <div class="hero"> 
+            <picture>
+                <source srcset="images/small_hero.webp" media="(max-width: 1080px)">
+                <img src="images/larger_hero.webp" alt="jarrell DownTown" width="1300"> 
+            </picture>
+            <div class="hero-text">
+                <h1>Discover the Future of Decentralized Infrastructure</h1> 
+                <p>Learn how DePIN projects are transforming real-world networks using blockchain technology.</p> 
+                <a href="projectdirectory.html" class="cta">Explore</a> 
+            </div>
+        </div> 
+        <section class="contact-grid">
+            <div class="contact-form">
+                <h2>Contribute to a DePIN Sector</h2>
+                <form method="get" action="thanks.html">
+                    <label>First Name<input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                    <label>Last Name<input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                    <label>Cell Phone<input type="tel" name="phone"  required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                    <label>Email<input type="email" name="email" required placeholder="example@gmail.com"  title="Your Email" autocomplete="email"></label>
+                    <label>Business/Organization Name<input name="bizname" type="text" required="" autocomplete="organization" title="Business or organization name"></label>
+                    <label>Sector of Interest</label>
+                    <select id="sector-select"></select>
+                    <label for="description">Business/Organization Description</label>
+                    <label><textarea id ="description" name="description" rows="4" title="Business or organization description" spellcheck="false"></textarea></label>
+                    <input type="submit" class="btn-primary" id="submit-btn" value="Submit Application">
+                    <input type="hidden" id="timestamp" name="timestamp">
+                </form>
+            </div>
+            <div class="contact-info"></div>
+        </section>
     </main>
     <footer>
         <div class="footer-left"> 
