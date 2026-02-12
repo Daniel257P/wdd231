@@ -39,8 +39,18 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <main>
-      <h1>Market Data</h1> 
+    <main class="market-main">
+        <section class="marketdata-header"> 
+            <h1>DePIN Market Data by Sector</h1> 
+            <p> Explore the leading projects in the DePIN ecosystem, organized by sector. Here you can view market capitalization by category, compare projects within each sector, and access more detailed information about every project, including its background, full description, and official links. Click on any project to open a detailed panel with expanded data. </p> 
+        </section>
+        <div id="market-sectors"></div>
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span id="modal-close">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-left"> 
