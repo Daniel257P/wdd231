@@ -6,7 +6,7 @@ featuresSection.classList.add("features");
 
 featuresSection.innerHTML = `
     ${featuresData.map(feature => `
-        <div class="feature" style="background-image: url('${feature.image}')">
+        <div class="feature">
             <div class="feature-content">
                 <h3>${feature.title}</h3>
                 <p>${feature.description}</p>
