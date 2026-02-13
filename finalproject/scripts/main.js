@@ -1,4 +1,3 @@
-// Features Section 
 import { featuresData } from "../data/content.mjs";
 
 const container = document.querySelector("#features");
@@ -26,7 +25,6 @@ cards[1].addEventListener("click", () => {
     window.location.href = "projectdirectory.html";
 });
 
-// Redirect Track Market Data
 cards[2].addEventListener("click", () => {
     window.location.href = "marketdata.html";
 });
@@ -213,7 +211,6 @@ function renderContentGrid(projects) {
     </ul>
   `;
 
-  // Event Listener for trending items
 
   aside.addEventListener("click", e => {
 

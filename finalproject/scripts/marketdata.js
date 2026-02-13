@@ -124,12 +124,6 @@ async function openProjectModal(id) {
                 <h2>${data.name}</h2>
             </div>
 
-            <p><strong>Founded:</strong> ${data.genesis_date || "Unknown"}</p>
-
-            <p><strong>Founder(s):</strong> 
-                ${data.links?.repos_url?.github?.length ? "See GitHub contributors" : "Unknown"}
-            </p>
-
             <p><strong>Market Cap:</strong> $${data.market_data.market_cap.usd.toLocaleString()}</p>
             <p><strong>Current Price:</strong> $${data.market_data.current_price.usd}</p>
 
@@ -140,7 +134,6 @@ async function openProjectModal(id) {
             <ul>
                 <li><a href="${data.links.homepage[0]}" target="_blank">Website</a></li>
                 <li><a href="https://twitter.com/${data.links.twitter_screen_name}" target="_blank">Twitter</a></li>
-                <li><a href="${data.links.repos_url.github[0]}" target="_blank">GitHub</a></li>
             </ul>
         `;
 

@@ -617,9 +617,7 @@ dialog p {
     color: var(--secondtext-color);
 }
 
-/* ================================
-   MODAL OVERLAY
-================================ */
+/* ----------------------MODAL OVERLAY---------------------- */ 
 
 .modal {
     position: fixed;
@@ -724,7 +722,7 @@ dialog p {
 }
 
 
-/* form section  */
+/* ----------------------FORM SECTION---------------------- */ 
 
 .contact-grid {
     display: grid;
@@ -912,14 +910,14 @@ dialog p {
 }
 
 
-/* === ABOUT PAGE WRAPPER === */
+/* ----------------------ABOUT PAGE---------------------- */ 
 .about-wrapper {
     max-width: 1100px;
     margin: 4rem auto;
     padding: 0 1.5rem;
 }
 
-/* === HERO SECTION === */
+
 .about-hero {
     text-align: center;
     margin-bottom: 3rem;
