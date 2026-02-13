@@ -53,6 +53,10 @@ header img {
     background-color: transparent; 
     color: var(--text-color);
 }
+.navigation li.current a {
+    color: var(--accent-color); 
+    border-right-color: var(--accent-color); /
+}
 
 .navigation a::after { 
     content: ""; 
@@ -64,6 +68,7 @@ header img {
     background-color: var(--accent-color); 
     transition: width 0.3s ease; 
 } 
+
 
 .content-grid {
     display: grid;
@@ -118,11 +123,13 @@ footer {
 
 } 
 .feature { 
-    height: 80px; 
+    height: 85px; 
 }
+
 .projects-main h1 p{
     margin: 4rem;
 }
+
 #market-sectors {
     grid-template-columns: repeat(2, 1fr);
 }

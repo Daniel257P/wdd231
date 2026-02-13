@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <option value="">Select Sector</option>
         ${sectors.map(sector => `<option value="${sector}">${sector}</option>`).join("")} `;
 
-        sectorSelect.setAttribute("name", "sector");
+        sectorSelect.setAttribute("name", "sector","required");
+        sectorSelect.setAttribute("required", "required");
         sectorSelect.innerHTML = selectTemplate;
     }
 
@@ -57,22 +58,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-
-    const firstName = params.get("first");
-    const lastName = params.get("last");
-    const email = params.get("email");
-    const sector = params.get("sector");
-    const timestamp = params.get("timestamp");
-
     const resultsContainer = document.querySelector("#results");
+    if (resultsContainer) { 
+        const params = new URLSearchParams(window.location.search);
+        const firstName = params.get("first");
+        const lastName = params.get("last");
+        const email = params.get("email");
+        const sector = params.get("sector");
+        const timestamp = params.get("timestamp");
 
-    resultsContainer.innerHTML = `
-        <p><strong>First Name:</strong> ${firstName}</p>
-        <p><strong>Last Name:</strong> ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Sector of Interest:</strong> ${sector}</p>
-        <p><strong>Submitted At:</strong> ${new Date(timestamp).toLocaleString()}</p>
-    `;
-});
+        resultsContainer.innerHTML = `
+            <p><strong>First Name:</strong> ${firstName}</p>
+            <p><strong>Last Name:</strong> ${lastName}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Sector of Interest:</strong> ${sector}</p>
+            <p><strong>Submitted At:</strong> ${new Date(timestamp).toLocaleString()}</p>
+        `;
+    }
