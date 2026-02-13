@@ -53,7 +53,7 @@ header img {
 }
 .navigation li.current a {
     color: var(--accent-color); 
-    border-right-color: var(--accent-color); /
+    border-right-color: var(--accent-color);
 }
 
 .navigation a::after { 
