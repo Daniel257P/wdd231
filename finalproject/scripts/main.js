@@ -177,9 +177,11 @@ function renderContentGrid(projects) {
     return `
       <li class="trending-item" data-id="${p.id}">
 
-        <img src="${p.image}"
-             alt="${p.name} logo"
-             class="t-logo">
+        <img src="${p.image}" alt="${p.name} logo" class="t-logo" 
+        width="40"
+        height="40" 
+        referrerpolicy="no-referrer" 
+        loading="lazy">
 
         <span class="t-name">${p.name}</span>
 

@@ -78,7 +78,11 @@ function renderSectors(sectors) {
                 <div class="sector-projects">
                     ${sector.projects.map(p => `
                         <div class="project-item" data-id="${p.id}">
-                            <img src="${p.image}" alt="${p.name} logo">
+                            <img src="${p.image}" alt="${p.name} 
+                            width="40"
+                            height="40" 
+                            referrerpolicy="no-referrer" 
+                            logo" loading="lazy">
                             <div>
                                 <h3>${p.name}</h3>
                                 <p><strong>Market Cap:</strong> $${p.market_cap.toLocaleString()}</p>
