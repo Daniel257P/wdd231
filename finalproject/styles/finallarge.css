@@ -7,7 +7,6 @@ header,main,nav,footer {
 header {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    align-items: center;
 }
 header img { 
     width: 100%;
@@ -39,7 +38,6 @@ header img {
 
 .navigation a:hover::after { 
     width: 100%; 
-    
 }
 
 .navigation a:hover { 

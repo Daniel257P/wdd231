@@ -12,6 +12,7 @@
     --accent-color: #FFB800;
     --background-color: #0B0E11;
     --text-color:#E6E6E6;
+    --whitebackground-color: whitesmoke;
     --secondbackground-color: var(--text-color);
     --secondtext-color:var(--background-color);
     --radius: 12px;
@@ -21,12 +22,11 @@
 /* ----------------------  HEADER DEPIN HUB---------------------- */ 
 
 header {
-    color: var(--header-font);
+    color: var(--text-color);
     background-color: var(--background-color);
     display: grid;
     grid-template-columns: auto 48px;
     padding: 10px 10px 5px 10px;
-    align-items: end;
     column-gap: 8px;
     align-items: center;
 }
@@ -123,7 +123,7 @@ header img {
     justify-content: center;   
     align-items: center;        
     text-align: center;
-    color: white;               
+    color: var(--text-color);               
     padding: 1.5rem;
     gap: 1rem;
     line-height: 1.5;
@@ -143,8 +143,8 @@ header img {
 .cta { 
     display: inline-block; 
     padding: .55rem 1.5rem; 
-    background: #0A84FF; 
-    color: white; 
+    background: var(--primary-color); 
+    color: var(--text-color); 
     border-radius: 6px; 
     text-decoration: none; 
     font-weight: 600;
@@ -161,7 +161,7 @@ header img {
 
 main { 
     display: grid;
-    background-color: whitesmoke;
+    background-color: var(--whitebackground-color);
 } 
 
 /* ----------------------  FEATURES---------------------- */ 
@@ -177,9 +177,6 @@ main {
     position: relative;
     height: 80px;
     border-radius: 1rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -189,7 +186,7 @@ main {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(10, 132, 255, 0.45);
+    background: rgba(10, 132, 255);
 }
 
 .feature:hover {
@@ -198,17 +195,16 @@ main {
 }
 
 .feature:hover::before {
-    background: rgba(0, 214, 143, 0.25);
+    background: var(--secondary-color);
 }
 
 .feature-content {
+    color: var(--text-color);
     position: absolute;
     text-align: center;
     margin: 1rem;
     left: 1rem;
     right: 1rem;
-    color: white;
-    z-index: 2;
 }
 
 .feature-content h3 {
@@ -343,7 +339,7 @@ dialog p {
     padding: 0.5rem 1rem;
     border-radius: 6px;
     border: none;
-    background: #eee;
+    background: var(--whitebackground-color);
     cursor: pointer;
     flex-shrink: 0; 
     white-space: nowrap; 
@@ -352,7 +348,7 @@ dialog p {
 
 .filter-btn.active {
     background: var(--primary-color);
-    color: white;
+    color: var(--text-color);
 }
 
 /* ---------------------- PROJECT + TRENDING ---------------------- */ 
@@ -445,7 +441,7 @@ dialog p {
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #aaa;
+  color: var(--whitebackground-color);
   border-bottom: 1px solid #222;
 }
 
@@ -461,7 +457,7 @@ dialog p {
     text-align: center; 
 }
 
-.newsletter h3 {
+.newsletter h2 {
     margin-bottom: 2rem;
 }
 
@@ -481,7 +477,7 @@ dialog p {
     background: #00D68F; 
     border: none; 
     border-radius: 6px; 
-    color: #0B0E11; 
+    color: var(--background-color); 
     font-weight: 600; 
 }
 
@@ -494,7 +490,7 @@ dialog p {
 }
 
 .sector-card {
-    background: var(--background-color, #ffffff);
+    background: var(--background-color);
     border-radius: 1rem;
     padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -562,10 +558,6 @@ dialog p {
     height: auto;
 }
 
-.footer-right a {
-    text-decoration: none;
-    color: var(--text-color);
-}
 
 .footer-right a {
     position: relative;
@@ -635,7 +627,7 @@ dialog p {
 }
 
 .modal-content {
-    background: var(--text-color, #ffffff);
+    background: var(--text-color);
     color: var(--secondtext-color, #222);
     width: min(600px, 95%);
     max-height: 90vh;
@@ -664,7 +656,7 @@ dialog p {
     right: 16px;
     font-size: 1.8rem;
     cursor: pointer;
-    color: var(--secondtext-color, #333);
+    color: var(--secondtext-color);
     transition: 0.2s ease;
 }
 
@@ -733,7 +725,7 @@ dialog p {
 }
 
 .contact-form {
-    background: var(--card-bg, #ffffff);
+    background: var(--secondbackground-color);
     padding: 2rem;
     border-radius: 14px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
@@ -761,16 +753,16 @@ dialog p {
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-    border-color: var(--accent, #4a7cff);
-    background: #fff;
+    border-color: var(--primary-color);
+    background: var(--secondbackground-color);
     outline: none;
 }
 
 .contact-form .btn-primary {
     width: 100%;
     padding: 0.9rem;
-    background: var(--accent, #4a7cff);
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--secondbackground-color);
     border: none;
     border-radius: 10px;
     font-size: 1.1rem;
@@ -778,11 +770,12 @@ dialog p {
 }
 
 .contact-form .btn-primary:hover {
-    background: var(--accent-hover, #3a63d6);
+    background: var(--accent-color);
+    color: var(--secondtext-color);
 }
 
 .contact-info {
-    background: var(--card-bg, #ffffff);
+    background: var(--secondbackground-color);
     padding: 2rem;
     border-radius: 14px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
@@ -811,9 +804,9 @@ dialog p {
 .contact-card {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: var(--accent-bg, #f5f7ff);
+    background: var(--whitebackground-color);
     border-radius: 12px;
-    border-left: 4px solid var(--accent, #4a7cff);
+    border-left: 4px solid var(--accent-color);
 }
 
 @media (max-width: 900px) {
@@ -826,7 +819,7 @@ dialog p {
     max-width: 600px;
     margin: 3rem auto;
     padding: 2rem;
-    background: #fff;
+    background: var(--text-color);
     border-radius: 12px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
@@ -856,7 +849,7 @@ dialog p {
     max-width: 700px;
     margin: 0 auto;
     padding: 1.8rem 2rem;
-    background: var(--card-bg, #ffffff);
+    background: var(--whitebackground-color);
     border-radius: 14px;
     border: 1px solid rgba(0,0,0,0.08);
     box-shadow: 0 4px 16px rgba(0,0,0,0.06);
@@ -926,7 +919,7 @@ dialog p {
 
 .about-subtitle {
     font-size: 1.2rem;
-    color: #555;
+    color: var(--secondtext-color);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -939,8 +932,9 @@ dialog p {
 }
 
 .about-card {
-    background: var(--card-bg, #ffffff);
+    background: var(--whitebackground-color);
     padding: 2rem;
+    margin-bottom: 2rem;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     border: 1px solid rgba(0,0,0,0.05);
@@ -953,13 +947,13 @@ dialog p {
 }
 
 .about-card h2 {
-    color: var(--accent, #0A84FF);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .about-card p,
 .about-card li {
-    color: #333;
+    color: var(--secondtext-color);
     line-height: 1.6;
 }
 
