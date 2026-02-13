@@ -186,7 +186,7 @@ main {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(10, 132, 255);
+    background: linear-gradient(#0A84FF, #0B0E11);
 }
 
 .feature:hover {
@@ -195,7 +195,7 @@ main {
 }
 
 .feature:hover::before {
-    background: var(--secondary-color);
+    background: var(--primary-color);
 }
 
 .feature-content {
